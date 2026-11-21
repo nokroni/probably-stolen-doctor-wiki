@@ -3,6 +3,8 @@ title: 床旁怎么操作
 description: 快速找到检查、监护、给药和结案用的控件。
 ---
 
+import WikiShot from '../../../../components/WikiShot.astro';
+
 import { Aside, CardGrid, LinkCard } from '@astrojs/starlight/components';
 import BedsideGuideDiagram from '../../../../components/BedsideGuideDiagram.astro';
 
@@ -50,3 +52,7 @@ import BedsideGuideDiagram from '../../../../components/BedsideGuideDiagram.astr
   <LinkCard title="物品图鉴" description="查找诊所会用到的药品、器材和耗材。" href="../../reference/items/" />
   <LinkCard title="操作索引" description="找按钮、查看前置条件和复查要求。" href="../../reference/procedures/" />
 </CardGrid>
+
+## 游戏画面
+
+<WikiShot name="bedside-map" version="0.17.40" alt="床旁人体图，画面左侧标有 R，右侧标有 L" caption="按图上的 R 和 L 认左右。病人的右侧在屏幕左边。" />

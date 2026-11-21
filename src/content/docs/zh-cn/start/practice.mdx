@@ -3,6 +3,8 @@ title: 在主菜单练习
 description: 用独立的练习病历熟悉医生专精的操作。
 ---
 
+import WikiShot from '../../../../components/WikiShot.astro';
+
 import { Aside, LinkCard, Steps } from '@astrojs/starlight/components';
 
 在主菜单点**打开诊所 → 练习病历**。先挑一份病历，看完来诊记录再点**接诊**。接诊后开始计时。演练有自己的设备和耗材，不会动到正式存档里的钱、库存和执照进度。
@@ -42,3 +44,7 @@ import { Aside, LinkCard, Steps } from '@astrojs/starlight/components';
 </Aside>
 
 <LinkCard title="床旁操作" description="随时回来查人体部位和常用捷径。" href="../bedside/" />
+
+## 游戏画面
+
+<WikiShot name="dressing" version="0.17.0" alt="包扎窗口显示环形轨道、绷带卷和进度条" caption="按住绷带卷沿环形轨道绕。达到窗口提示的圈数后松开，才算固定。" />

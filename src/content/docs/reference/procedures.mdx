@@ -5,108 +5,13 @@ description: Find each bedside action, its equipment and findings, and the next 
 
 import { LinkCard } from '@astrojs/starlight/components';
 
-These instructions cover the mod’s simulated controls. Availability depends on the current findings, clinic license, fitted devices, power, and stock. Read the explanation on an unavailable control or the **Me** thought at lower left to see what the current chart needs.
+These are simulated controls in Probably Stolen Doctor. The active chart, clinic license, fitted equipment, power, and stock determine which controls are available. Hover over a dimmed control or read the doctor’s thought at the lower left when you need the next step.
 
-## Intake and bedside assessment
+<LinkCard title="Intake and bedside assessment" description="Ask about symptoms, admit the patient, examine them, and record a working diagnosis." href="./assessment/" />
+<LinkCard title="Monitoring and diagnostic tools" description="Connect bedside sensors, run tests, and compare fresh readings." href="./monitoring/" />
+<LinkCard title="Breathing, circulation, and defibrillation" description="Use airway support, CPR, the defibrillator, and powered circulation equipment." href="./resuscitation/" />
+<LinkCard title="Medicines and treatment stock" description="Find the medicine tray, select a lot, give a dose, and recheck the response." href="./medicines/" />
+<LinkCard title="Wounds, fractures, and surgery" description="Use the game’s hands-on procedure windows to treat an examined site." href="./wound-care/" />
+<LinkCard title="Source checks, observation, and transfer" description="Check hazards, prepare transport, finish observations, and close the chart." href="./transfer/" />
 
-| Action | Where to find it and what it does |
-| --- | --- |
-| Ask about symptoms | At the counter or above the body chart. Use the available question about onset, pain, cough, exposure, or dizziness. During a follow-up, ask about first aid or repeat the site-specific check when offered. |
-| Admit patient | Read the intake, available resources, and payer terms first. Accept at the window or use **Admit patient** on a prepared practice chart. The bedside clock starts when care begins. |
-| Body exam and Exam findings | Use the bottom button. After 2.5 game seconds, read the report and select a body site for its current findings. Repeat after a change. The exam does not replace a monitor measurement or a witness account. |
-| Examine, open a covering, or read a treatment card | Select the site named in the clue. Some charts let you look beneath clothing, open a boot, or read a treatment card at the bedside. Check the newly exposed site and re-examine if prompted. |
-| Check pulse and Check circulation | Choose a usable hand or forearm for the timed pulse check. On injury charts, **Check circulation** may also appear on a hand or foot downstream of the affected site. A readable ECG and a felt pulse are separate findings. |
-| Select diagnosis | Choose or revise the working diagnosis below the monitor. Use the history, exam, and tests you have. Many charts ask for a supported diagnosis before discharge or handover. Urgent treatment can start earlier. |
-
-## Monitoring and diagnostic tools
-
-| Action | Where to find it and what to check |
-| --- | --- |
-| Attach ECG and Check connections | Select the chest with a powered monitor fitted. **Check connections** helps when an attached lead or probe is giving a poor signal. After a shock, let the sweep restore and compare the rhythm with a new pulse check. |
-| Attach oximeter | Select an intact hand with a finger probe fitted and the monitor on. Wait for the pleth and SpO₂ readings to settle. If the chart reports a loose clip, **Refit finger clip** at the selected hand or under **Support**. Compare it with the wrist and the patient’s breathing. |
-| Open pressure cuff, Wrap cuff, and Measure cuff BP | Select an eligible upper arm. Wrap the cuff in its panel, then start the reading. You can work on another problem while it cycles. A fresh measurement may be required after an intervention or a move. M4 offers **Auto cuff** and **Stop cuff cycle**. |
-| Take temperature or Connect temperature probe | Open the thermometer at the head. A fitted handheld model issues a single reading. With a thermal monitor and powered M4, connect the probe for a continuous trend. **Disconnect probe** is in the bottom row. |
-| Check glucose | Select a usable hand or choose **Diagnostics** with a fitted glucose sampler. Wait for the in-game reading. Repeat after treatment and compare any remaining grip or speech changes with the new finding. |
-| Acquire 12-lead and Read twelve leads | Use the chest controls or **Instruments → Diagnostics**. Fit a recorder with a powered M3 or M4, connect the ECG, and leave the signal readable while it captures. Open the recorded printout to see the result and its age. |
-| Save ECG | With a readable connected ECG on an M3 or M4, capture the current strip. Keep it for comparison after care or a recurrence. The 12-lead printout is recorded separately. |
-| Connect / zero ART | Use a forearm or **Diagnostics** with a fitted transducer and compatible powered monitor. Wait for zeroing. When the channel is live, compare its ABP trend with the patient and the last cuff reading. |
-| Capture ultrasound | In **Diagnostics**, select the chest, abdomen, or eligible limb site. Use the powered ultrasound and read the labeled result for that region. A scan of another site does not fulfill a site-specific requirement. |
-| Check chemistry | Use a forearm or **Diagnostics** with the powered bedside lab. Complete the game’s collection gesture and dock the on-screen sample. Read the result before starting an indicated correction. |
-| Fit, reconnect, or disconnect the CO₂ line | Use **Instruments → Support** with the powered M4 and ventilator fitted. Once attached, the channel can sample supported breaths. Wait for a complete breath and compare the wave with chest movement. Disconnecting blanks the channel. |
-| Archive and flag pressure | **Archive** snapshots the current readings when the M4 and station controller have power. If a chart offers **Pressure holding** or **Flag low pressure**, collect the required readings and record what they show. |
-
-## Breathing, circulation, and defibrillator
-
-| Action | Where to find it and what to check |
-| --- | --- |
-| Support airway and Refit mask | Select the head or use the offered airway shortcut with the bag and mask fitted. Watch the bed for chest rise. If support becomes unreliable, follow the local **Refit mask** or **Reseat circuit** prompt and check again. |
-| Start or stop ventilator | Use **Support** with an M4 and a powered ventilator. Check chest motion and the CO₂ trace when the sampling line is fitted. **Stop ventilator** stays in the bottom row when the device is running. |
-| Manual CPR | Use **Start CPR** at the chest after the bedside confirms eligibility. Each tap of **Space** makes one in-game compression. The mouse remains available for other controls. **Stop CPR** stays at the bottom, including during defibrillator use. |
-| Powered chest compressor | At the chest, open **Compressor**, choose **Fit compressor frame**, then **Start compressor** when ready. Check the power indicator and movement. AED analysis can pause powered compressions. The compressor can continue through eligible shocks. Stop it with the same bottom control. |
-| Attach pads to chest | Select the chest and place both numbered pads onto the matching guides on the body chart. Wait for connection before opening the device controls. |
-| AED analysis, charge, and deliver | In the AED window, use **Analyze rhythm** and read the advice. When it advises a shock and the controls permit it, use **Charge**, wait for readiness, and use **Deliver**. Manual compressions must stop during the blocked steps. Recheck the pulse and support after delivery. |
-| Manual defib and SYNC | In the manual unit window, choose an available energy setting, charge, and follow the readiness indicators. Use **Enable SYNC** only when the chart supports synchronization and the monitor can show markers. Use **Disable SYNC** when the next intervention requires it. Treat **Review shock** as a warning to recheck the rhythm and pulse. Overriding it can hurt the simulated patient. |
-| Start infusion | Use **Support** at a usable forearm with a powered infusion pump and compatible monitor. The chart checks the indicated ClearFlow stock and pressure findings. Read the trend while the infusion runs. |
-| Screened blood and Blue Blood | Use the available blood-station action at an intact forearm. Select the correct bag and confirm the shown cost. Wound control or other definitive care can still be required. Recheck circulation and the pressure trend while support runs. |
-| Start reperfusion | At the chest on an eligible Grade IV chart, review the current 12-lead and any prerequisite treatment. Confirm the action when the powered equipment is ready. Keep the ECG connected and check for recurrence or poor circulation during the new observation period. |
-| Warm patient, Cool patient, or rest | **Support** offers warming or cooling when the findings support it. Some stable charts instead offer **Rest and reassess**, **Offer water and rest**, **Rest upright**, **Quiet rest**, or **Settle on the cot** at the bed. Watch the relevant finding drift over time and recheck. |
-
-## Medicines and treatment stock
-
-Open **Medicines**, an eligible **Syringe tray** at a forearm, or **Instruments → Treatment tray**. Confirm the exact lot, purity, and current price. Use **Pin Quick care action** for quick access to a medicine or a dressing. A dose may require a syringe as well as the pack. A failed dose still uses the listed stock. Check the patient and the new response chance before retrying.
-
-| Action | What the chart checks |
-| --- | --- |
-| BroadGuard, GlucoRescue, PulseLift, and Electrolyte support | The corresponding infection finding, measured low glucose, circulation finding, or chemistry result determines eligibility. Watch the response and repeat the relevant assessment before closing care. |
-| Naloxgone | Read the exposure record and confirm the indicated exposure in the chart. When the dose becomes available, check breathing again and continue observation. |
-| Heparin | On eligible charts, find it at the forearm after the required coronary evidence. Confirm the dose before moving on to the chart’s next step. |
-| Pressor Bridge | Grade III compound for eligible measured low pressure with a pulse. Use a forearm and recheck pressure and ECG during the support window. |
-| Rhythm Buffer | Grade IV compound. The shortcut checks a pulse, recent pressure, readable ECG, and documented recurrence. A responding pack delays recurrence. Check the pressure again even if the tracing improves. |
-| Epinephrine | Grade IV support for the chart’s documented absent pulse or sustained severe circulatory failure. When the forearm control enables, confirm the lot. Recheck circulation and keep required support running. |
-| Native pain relief and local infection care | **Medicines** can offer monitored use of an Oxymore or Nomore Injector or an eligible Phagimycin Pill. Ask about symptoms, examine the patient, and attach the requested sensors. Reassess breathing and the treated site. |
-| Native wound adjuncts and clinic biogel | Select the examined site to see whether the chart accepts salve, rubbing alcohol, roe, fish skin, or clinic-made biogel. These each have their own stock and eligibility. The same ward or recovery chart may offer sponsored Blue Blood. |
-| Comfort, recovery plan, and follow-up medicine | Use **Offer PainEase**, **Discuss a recovery plan**, or other comfort actions only when offered. A monitored follow-up can allow Synaprest after the conversation. Some beds offer time with the patient or a crew takeover while you continue support. |
-| Verified maintenance stock | When an eligible specialist chart offers protected stock, use the visible reserve or collection action. **Use verified Immunivax** checks the exact usable stock before recording the maintenance treatment. |
-| Take-home prescription | Before a suitable discharge, select **Prescribe PainEase** or **Prescribe Phagimycin Pill** when offered. Review the price and confirm the stock before signing. |
-
-## Hands-on procedures
-
-| Action | What to do in the game window |
-| --- | --- |
-| Hold pressure | Select an exposed bleeding site with an available pressure action. Hold the on-screen pad in the guide until the prompt changes. Use the offered wrap when ready, then recheck the site. |
-| Clear loose debris | Select an examined surface wound and move the pictured loose pieces into the tray. This opens the next pressure or dressing action. A deep or fixed object uses a separate control. |
-| Apply dressing or cover a burn | Select the affected site. Choose the shown dressing, burn cover, or eligible **Fish skin**. Follow the circular guide and release the mouse after the bar fills. Each completed wrap treats its selected site. Confirm the wound marker and recheck bleeding. |
-| Apply splint | At a charted fracture, drag both pictured segments to their outlines and place the square plate over the join. Do one site at a time, then check circulation if the chart requests it. |
-| Reduce joint | Open the joint panel from the examined site. Drag the rounded piece into its matching outline and release to lock it. Check the hand or other indicated distal site after the gesture. |
-| Secure fragment | At the site of an embedded object, place the two pictured braces into their marked slots to stabilize it in the simulation. Reassess the wound and follow the chart’s transfer requirements. |
-| Drain chest | Select the chest on an eligible Grade III or higher chart. Complete the indicated exam, ultrasound, pressure, and support checks and have a sterile procedure kit. Follow the window’s tool guide, then operate its lever. Recheck chest movement and pressure. Residual bleeding may need further care. |
-| Automatic repair or Toolset prep | Select the documented source after the chart’s scan, pressure and support checks. Confirm the sterile kit and powered surgery core. Where offered, a compatible Surgery Toolset can assist an eligible surface revision. Keep the patient under observation and check the current result. |
-| Capture and close with the surgery core | At an eligible scanned site, the chart checks circulation, recent pressure, blood support, and power. Fit the capture cassette in the game’s guides. Extraction and closure are separate commits. Repeat pressure and complete the seal or prepare the charted transfer. |
-| Replant a finger | At the affected hand, **Check cassette and ask consent**. When the chart allows it, use the powered surgery core, microscope, and sterile finger coupler. Follow the cradle guides and validate with **Check flow at finger**. If the chart points to transfer, dress the hand and pass the recorded tissue cassette with the patient. |
-| Major limb injury | Treat the stump and other visible sites separately. Move probes, cuff, and access to the usable side identified by the chart. Recheck pressure after dressings and review the tissue-custody note at handover. |
-| Discuss, mark, or defer scar revision | Examine the area, discuss consent, and use **Mark scar outline** if the patient agrees. Respect an offered change to the outline or choose **Defer revision**. **Surface revision** requires the marked site and the requested review. |
-
-## Source checks and transfer paperwork
-
-| Action | How the chart uses it |
-| --- | --- |
-| Disconnect power cable or isolate a service port | Use the visible bedside hazard action or **Source / transfer** when the chart requires it. Stabilize and reassess once the game marks the source isolated. |
-| Read the exposure label, badge, or container | Open the indicated exposure object. **Seal exposure kit** is offered on applicable charts. Compare the record with the symptoms and the witness before choosing a treatment. |
-| Ask the witness and file property | Use the available question at the top of the chart or in **Diagnostics**. In **Source / transfer**, file the badge, property or exposure option that matches the observed evidence. Document uncertainty when the chart offers it. |
-| Test tap-water sample | Use the available bedside test with a fresh Water Test Strip in owned stock. The game files the result for the crew. |
-| Read Referring chart or request Medbay scan review | Open the prior readings or strips to build the current chart. A scan review can supply extra evidence where offered. The actual handover is a separate action. |
-| Compare findings and file a report | When paperwork is requested, gather the site findings and witness account, then compare the requested readings. Review which findings or signed copy will go with the patient before choosing the report option. |
-| Transfer options and Move to cot | Check whether the chart offers a staffed crew, an approved shuttle, or local care. Discuss payment separately if the patient can. When the game offers **Move to cot**, finish the required monitoring and transfer checks. After the move, repeat the indicated exam, cuff, and breathing checks. |
-| Practice, book, or cancel a dispatch | At an empty Grade IV bedside, cycle the title at the top to browse available dispatches. Read the stock and equipment requirements. Use **Practice call** when the listing requires a rehearsal, then **Book dispatch** when eligible. Use **Cancel booking** to change an existing appointment while that control is available. |
-
-## Observation, closure, and follow-up
-
-- **Discharge patient.** Complete the required care, diagnosis, observation and rechecks. The local discharge control turns green when the chart is ready. A minor case can finish without measurements the chart does not need.
-- **Call Medbay and Hand over to Medbay.** Call on eligible visits that need further help. Keep the patient supported until the crew arrives. Finish the current handover checks, or use **Ask crew to take over** when the case offers that alternative. On a local-only visit, use the available bedside care and complete its observation.
-- **Watch the change after treatment.** A new symptom or genuine deterioration interrupts the observation window. Treat the cause, confirm the relevant findings again, and allow a fresh watch to finish. If a signal drops out, check the probe or line and the patient before deciding what changed.
-- **Complete specialist and post-operation checks.** In the available ward panel, request and file any required record, compare the marked observations, and finish the offered rehearsal before using specialist equipment. Once a procedure is running, verify pulse, breathing and the probe after a move. **Confirm transfer checks**, **File recovery check**, and **Sign completed observation** require the current findings shown beside them. If a fresh cuff expires, measure again. **Abort procedure** opens a confirmation when available.
-- **Close consultations and visits.** Confirm any eligible deferred consultation, read the receipt, and return to the counter for the reply. Check the disposition before starting another appointment.
-- **Open Case review or Recent cases.** Use the timeline filters, open a retained exam, and compare recorded strips and the timing of treatment. Read an authorized **Signed ward update** when it appears. At a follow-up visit, ask about changes and repeat the requested finding before signing or arranging more care.
-
-<LinkCard title="Items and equipment" description="Find the devices and supplies required at the bedside." href="../items/" />
-<LinkCard title="At the bedside" description="Use the body-chart map and find the next control." href="../../start/bedside/" />
+[Items and equipment](../items/) · [Bedside guide](../../start/bedside/)

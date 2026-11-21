@@ -85,8 +85,40 @@
 .sl-markdown-content th { text-align: start; }
 .sl-markdown-content td { min-width: 9ch; }
 
+.wiki-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: .75rem;
+}
+
+.wiki-comparison .wiki-shot { margin: 0; }
+
+.symptom-list {
+  display: grid;
+  gap: .4rem;
+}
+
+.symptom-list > .symptom-choice {
+  margin: 0;
+  border: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-bg-sidebar);
+}
+
+.symptom-choice > summary {
+  min-height: 44px;
+  padding: .6rem .85rem;
+  cursor: pointer;
+  color: var(--sl-color-white);
+  font-weight: 700;
+}
+
+.symptom-choice > p { margin: .4rem .85rem .8rem; }
+.symptom-choice[open] { border-color: var(--sl-color-accent); }
+
 @media (max-width: 44rem) {
   .wiki-links { grid-template-columns: 1fr; }
+  .wiki-comparison { grid-template-columns: 1fr; }
   .site-title { font-size: clamp(.85rem, 3.95vw, 1.1rem); }
   .hero { padding: 1.15rem; }
   .hero h1 { max-inline-size: 22ch; }

@@ -3,6 +3,8 @@ title: At the bedside
 description: Find exams, instruments, medicines, and handover controls during a Doctor visit.
 ---
 
+import WikiShot from '../../../components/WikiShot.astro';
+
 import { Aside, CardGrid, LinkCard } from '@astrojs/starlight/components';
 import BedsideGuideDiagram from '../../../components/BedsideGuideDiagram.astro';
 
@@ -50,3 +52,7 @@ After closing the visit, **Case review** lets you compare findings, intervention
   <LinkCard title="Item reference" description="Which supplies and devices the clinic uses." href="../../reference/items/" />
   <LinkCard title="Procedure reference" description="Controls, requirements, and reassessment." href="../../reference/procedures/" />
 </CardGrid>
+
+## In the game
+
+<WikiShot name="bedside-map" version="0.17.40" alt="Bedside body chart with R on the left and L on the right" caption="Use R and L on the diagram. The patient’s right is on the left side of your screen." />
