@@ -5,80 +5,106 @@ description: 从病人的主诉、查体所见或监护信号找下一步。
 
 import WikiShot from '../../../../../components/WikiShot.astro';
 
-先处理眼前的呼吸或循环问题。腾得出手时做一次**全身检查**，再点提示所指的人体部位，或向病人追问。拿不准时看左下角「我」的想法。
+病人倒下时，先查手腕脉搏和胸廓起伏。摸不到脉，就查[心律与心脏骤停](../rhythms/)里的游戏操作。还有脉搏但胸廓几乎不动，可先查[呼吸问题](../breathing/)。
+
+## 从病人身上找线索
+
+展开下方最接近的一项。用**全身检查**和**检查结果**定位线索，再点相应部位或向病人追问。左下角「我」的想法会给出下一步操作的提示。
 
 <div class="symptom-list">
 
 <details name="symptom" class="symptom-choice">
   <summary>胸口烧灼、发紧、刺痛</summary>
-  <p>问进食、活动和呼吸会不会影响疼痛，什么时候开始。查胸部，有设备时做十二导联。</p>
-  <p><a href="../chest-pain/">胸痛 →</a></p>
+  <p>问疼痛何时开始，进食、动作或呼吸会不会影响。选胸部，对照固定压痛、两侧起伏和休息时仍有的压迫感。症状指向冠脉问题且已装记录仪时，可<strong>采集十二导联</strong>。</p>
+  <p><a href="../chest-pain/">区分胸痛的原因 →</a></p>
 </details>
 
 <details name="symptom" class="symptom-choice">
-  <summary>心跳漏拍、过快或过慢，头晕或倒下</summary>
-  <p>比较手腕脉搏、能读的心电和当前血压。</p>
-  <p><a href="../rhythms/">心律 →</a></p>
+  <summary>心跳漏拍、过快或过慢，或脉搏很弱</summary>
+  <p>选能用的一侧手腕<strong>检查脉搏</strong>，到胸部接心电导联，到上臂测血压。结合心律快慢、是否规整、实际脉搏和血压再选模式。</p>
+  <p><a href="../rhythms/">区分心律与放电模式 →</a></p>
 </details>
 
 <details name="symptom" class="symptom-choice">
   <summary>气喘、哮鸣、声音嘶哑、胸廓起伏很弱</summary>
-  <p>看胸廓两侧，问接触史，查已接的管路。把有效血氧或呼气末二氧化碳读数和病人的呼吸对照。</p>
-  <p><a href="../breathing/">呼吸问题 →</a></p>
+  <p>看胸廓两侧，查已接的面罩或管路，再问有没有接触烟雾、粉尘等。把可用的血氧或呼气末二氧化碳波形与病人的动作对照。受撞后起伏不对称也可查<a href="../major-trauma/">重度外伤</a>。</p>
+  <p><a href="../breathing/">区分不同呼吸线索 →</a></p>
 </details>
 
 <details name="symptom" class="symptom-choice">
   <summary>咳嗽、发热、寒战，或伤口热肿</summary>
-  <p>测体温，查胸部或局部病灶。人明显不舒服时再查循环。</p>
-  <p><a href="../infection/">发热与感染 →</a></p>
+  <p>能<strong>量体温</strong>就先测，再找来源。咳嗽时对照两侧胸部，伤口可疑就掀开遮挡，侧腰痛时问排尿情况。循环变差时连续比较血压。</p>
+  <p><a href="../infection/">找病灶并复查 →</a></p>
 </details>
 
 <details name="symptom" class="symptom-choice">
-  <summary>突发头痛、握力下降、言语变化或短暂晕厥</summary>
-  <p>问什么时候变的，比较言语、笑容和双臂，再测指尖血糖。纠正后复查仍在的异常。</p>
-  <p><a href="../neurologic/">神经系统症状 →</a></p>
+  <summary>头痛、头晕或短暂晕厥</summary>
+  <p>问什么时候开始，之前发生了什么，以前是否有过。选头部检查言语和动作。即使首次查体平稳，也要记录突然达到最痛的经过。</p>
+  <p><a href="../neurologic/">区分头痛和晕厥的线索 →</a></p>
+</details>
+
+<details name="symptom" class="symptom-choice">
+  <summary>口齿含糊、笑容不对称、手臂下沉或握力下降</summary>
+  <p>问最后一次表现正常是什么时候，比较两侧。装好设备时，到能用的指尖<strong>测血糖</strong>。纠正后复查看原来的无力是否仍在。即使心电读数平稳，也要记录持续的异常。</p>
+  <p><a href="../neurologic/">区分低血糖与卒中线索 →</a></p>
 </details>
 
 <details name="symptom" class="symptom-choice">
   <summary>呕吐、腹泻、侧腰痛或下腹痛</summary>
-  <p>问一开始疼在哪儿，有没有移位。查腹部，区分散在绞痛和固定的压痛。</p>
-  <p><a href="../abdominal/">腹痛 →</a></p>
+  <p>问一开始疼在哪儿、有无移位、还能不能喝水。选腹部，区分散在绞痛和持续的固定压痛。同时有侧腰痛和排尿异常时，把两条线索一起记录。</p>
+  <p><a href="../abdominal/">区分腹痛的线索 →</a></p>
 </details>
 
 <details name="symptom" class="symptom-choice">
   <summary>出汗、手抖、意识模糊、抽筋或体温异常</summary>
-  <p>测血糖或体温，查看包装和接触史，按病历提示做生化。</p>
-  <p><a href="../metabolic-exposure/">代谢与暴露 →</a></p>
+  <p>先看有没有没吃饭、没做滤过或接触过冷热环境。根据线索和装好的器材，选<strong>测血糖</strong>、<strong>量体温</strong>或<strong>生化检验</strong>。</p>
+  <p><a href="../metabolic-exposure/">区分代谢和体温线索 →</a></p>
 </details>
 
 <details name="symptom" class="symptom-choice">
-  <summary>衣物渗血、切伤、烧伤、变形或一动就痛</summary>
-  <p>在人体图上暴露患处，查出血、碎屑、关节骨骼和远端循环。</p>
-  <p><a href="../wounds/">伤口和肢体损伤 →</a></p>
+  <summary>用药后嗜睡，或出现带电、辐射警告</summary>
+  <p>按屏幕提示先隔离危险。手边有包装、剂量牌或证人时，先核对证据再选处置。把实际呼吸和脉搏与对方说的经过对照。</p>
+  <p><a href="../metabolic-exposure/">核对接触证据 →</a></p>
 </details>
 
 <details name="symptom" class="symptom-choice">
-  <summary>重撞后血压低、手发冷</summary>
-  <p>查灌注，按提示扫查可疑部位。体表伤口很小，仍可能同时有内出血。</p>
-  <p><a href="../major-trauma/">重度外伤 →</a></p>
+  <summary>切伤、烧伤、碎屑、变形或一动就痛</summary>
+  <p>在人体图上选准确部位，按提示掀开遮挡。看哪条发现会改变处置，再确认是否还要到伤处远端<strong>检查血运</strong>。</p>
+  <p><a href="../wounds/">查伤口和肢体操作 →</a></p>
+</details>
+
+<details name="symptom" class="symptom-choice">
+  <summary>重撞后衣服浸血、脉搏弱或手发冷</summary>
+  <p>逐处查看，测当前血压，有入口时扫查可疑部位。肢体已经包扎，也可能还有更深处的损伤。</p>
+  <p><a href="../major-trauma/">区分出血和内部损伤 →</a></p>
+</details>
+
+<details name="symptom" class="symptom-choice">
+  <summary>植入体周围肿胀、发热或渗液</summary>
+  <p>先查患处，病历提供接口检查时按提示操作。再看体温、呼吸和循环有没有变化。</p>
+  <p><a href="../recovery-specialist/#植入体异常">植入体异常 →</a></p>
 </details>
 
 <details name="symptom" class="symptom-choice">
   <summary>搬动或重新接线后数值变化</summary>
-  <p>查胸廓起伏、脉搏、探头和最新血压，再和原记录对照。</p>
-  <p><a href="../recovery-specialist/">恢复观察 →</a></p>
+  <p>先看病人，把实际胸廓起伏、手腕脉搏与新信号对照。重新测压，再确认旧读数是什么时间测的。</p>
+  <p><a href="../recovery-specialist/">恢复期间怎么复测 →</a></p>
 </details>
 
 </div>
 
 ## 最先看到的是监护异常
 
-- **心电平直或消失。** 查导联，再摸脉搏。电击和按压时，波形可能暂时断开或变形。导联接好、波形平直，又摸不到脉时，查[心律与心脏骤停](../rhythms/)。
-- **血氧低，动脉压低或高。** 查探头，和实际胸廓起伏或脉搏对照。能用袖带时，可重新测压比较。失血可能让循环变差，血氧数字却一时还行。
-- **呼气末二氧化碳波形短、偏低、偏高或消失。** 波形短时比较两侧胸廓。有呼吸但平台偏低时查循环。呼吸慢又读数偏高时查通气。没读到呼吸，先看采样管和病人有没有动作。
+| 监护信号 | 游戏里接着查什么 |
+| --- | --- |
+| 心电平直、消失或正在恢复 | 选胸部检查导联，再对照手腕脉搏。放电后画面可能暂时无波形，按压也会让波形变形。导联可读而波形持续平直、又摸不到脉时，查[心律与心脏骤停](../rhythms/)。 |
+| 血氧读不到或偏低 | 检查探头接触，确认有可用的脉搏信号，再和实际胸廓起伏对照。搬动病人后读不到数值时，可能要**重新夹好指夹**。 |
+| 动脉压偏低、偏高或消失 | 查测压管路，再摸脉。能用袖带时测一遍新血压。血氧平稳时，仍可能有持续失血或血压下降。 |
+| 呼气末二氧化碳波形变形 | 波顶斜着上升可能与气流受限有关，短而快的波也可能随浅呼吸出现。要对照两侧胸廓。有胸廓起伏但平台偏低时，也要查血压和脉搏。 |
+| 呼气末二氧化碳偏高或未检测到呼吸 | 呼吸慢又读数偏高时查通气。读不到时先确认采样管是否脱开，重接后等一次完整呼气，同时看胸廓有没有动。 |
 
-几条线索对不上时，优先复测能提供可靠现值的一项，原因未明就先保留初步诊断。按钮位置见[床旁操作](../../procedures/)。
+几条线索对不上时，优先复测能提供可靠现值的一项，原因未明就先保留初步诊断。[监护操作](../../procedures/monitoring/)
 
 ## 游戏画面
 
-<WikiShot name="exam-findings" version="0.17.40" alt="检查结果列表显示记录时间，部分部位检查受限，部分未见异常" caption="「检查结果」列出检查过的部位以及距上次记录的时间。标了 Limited 的部位表示当时未能完成该项检查。" />
+<WikiShot name="exam-findings" version="0.17.40" alt="检查结果列表显示记录时间，部分部位检查受限，部分未见异常" caption="「检查结果」列出检查过的部位和时间。界面中的 Limited 对应中文版的「无法完整检查」。" />

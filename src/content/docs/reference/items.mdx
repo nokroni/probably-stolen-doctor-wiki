@@ -3,95 +3,15 @@ title: "Items and equipment"
 description: "Find clinic equipment, treatment stock, ingredients, and compatible items from the base game."
 ---
 
-The Doctor license unlocks normal equipment purchases. Grade I gets a starter rack. From Grade II, check the medical supplier’s rotating stock. A Medical Bay Supply Crate can contain equipment before its purchase grade, though advanced models appear less often. Fit the device to the rack and check its power and attachments before admitting a patient.
+import { LinkCard } from '@astrojs/starlight/components';
 
-Keep supplies in unlocked owned storage. Move finished packs out of production machines before using them at the bed. The game shows the selected lot and current price before you confirm.
+Pick an item category. Each guide shows how to get the item, where to use it, and which versions are available.
 
-## Browse by item type
-
-<div class="item-type-list">
-
-<details name="item-type">
-  <summary>Clinic setup</summary>
-  <ul>
-    <li><a href="./clinic-documents/">Clinic papers and license</a></li>
-    <li><a href="./equipment-rack/">Bedside equipment rack</a></li>
-    <li><a href="./medicine-cabinet/">Medicine cabinet</a></li>
-    <li><a href="./power/">Clinic power</a></li>
-    <li><a href="./modules/">Native equipment modules</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>Monitoring and diagnosis</summary>
-  <ul>
-    <li><a href="./monitors/">M2, M3, and M4 monitors</a></li>
-    <li><a href="./finger-probe/">Finger pulse probe</a></li>
-    <li><a href="./blood-pressure/">Cuff and arterial pressure</a></li>
-    <li><a href="./thermometers/">Thermometers and thermal monitor</a></li>
-    <li><a href="./glucose-sampler/">Glucose sampler</a></li>
-    <li><a href="./twelve-lead/">12-lead recorder</a></li>
-    <li><a href="./ultrasound/">Portable ultrasound</a></li>
-    <li><a href="./bedside-lab/">Bedside lab</a></li>
-    <li><a href="./station-controller/">Station control module</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>Treatment equipment</summary>
-  <ul>
-    <li><a href="./defibrillators/">AED and manual defibrillator</a></li>
-    <li><a href="./bag-mask/">Bag and mask</a></li>
-    <li><a href="./chest-compressor/">Chest compressor</a></li>
-    <li><a href="./syringe-tray/">Syringe tray</a></li>
-    <li><a href="./infusion-pump/">Infusion pump</a></li>
-    <li><a href="./ventilator/">Transport ventilator</a></li>
-    <li><a href="./blood-station/">Blood station and blood bags</a></li>
-    <li><a href="./surgery-core/">Automatic surgery core and toolset</a></li>
-    <li><a href="./microscope-cradle/">Microscope cradle</a></li>
-    <li><a href="./recovery-cot/">Recovery cot</a></li>
-    <li><a href="./immune-regulator/">Immune Regulation Module</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>Clinic medicine</summary>
-  <ul>
-    <li><a href="./broadguard/">BroadGuard</a></li>
-    <li><a href="./glucorescue/">GlucoRescue</a></li>
-    <li><a href="./clearflow/">ClearFlow</a></li>
-    <li><a href="./pulselift/">PulseLift</a></li>
-    <li><a href="./heparin/">Heparin</a></li>
-    <li><a href="./painease/">PainEase</a></li>
-    <li><a href="./clinic-biogel/">Clinic Biogel</a></li>
-    <li><a href="./pressor-bridge/">Pressor Bridge</a></li>
-    <li><a href="./rhythm-buffer/">Rhythm Buffer</a></li>
-    <li><a href="./epinephrine/">Epinephrine</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>Treatment supplies and native stock</summary>
-  <ul>
-    <li><a href="./sterile-supplies/">Sterile supplies</a></li>
-    <li><a href="./dressing-supplies/">Bandages and dressings</a></li>
-    <li><a href="./wound-adjuncts/">Wound adjuncts and fish supplies</a></li>
-    <li><a href="./native-pain-relief/">Native pain-relief injectors</a></li>
-    <li><a href="./native-infection-stock/">Phagimycin and native infection stock</a></li>
-    <li><a href="./native-specialty-medicine/">Native specialty and rescue injectors</a></li>
-    <li><a href="./counter-stock/">Native stock, inspection, and procurement</a></li>
-    <li><a href="./exposure-stock/">Counter goods and exposure evidence</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>Growing and chemistry</summary>
-  <ul>
-    <li><a href="./clinic-crops/">Clinic crops and genetics</a></li>
-    <li><a href="./chemistry-tools/">Native chemistry tools</a></li>
-    <li><a href="./sterile-bench/">Sterile finishing bench</a></li>
-    <li><a href="./clinic-reagents/">Clinic reagent bottles</a></li>
-  </ul>
-</details>
-
+<div class="wiki-links">
+  <LinkCard title="Clinic setup and power" description="Find the license, storage, and power supplies used to run the bedside." href="./setup-power/" />
+  <LinkCard title="Monitoring and diagnosis" description="Compare monitors, probes, and the tools that collect diagnostic findings." href="./diagnostic-equipment/" />
+  <LinkCard title="Treatment equipment" description="Find the devices used for breathing, circulation, transfusion, surgery, and recovery." href="./treatment-equipment/" />
+  <LinkCard title="Clinic medicine" description="Look up each clinic medicine, what it does, and how to obtain it." href="./clinic-medicine/" />
+  <LinkCard title="Supplies and native medicine" description="Find dressings, sterile supplies, and compatible stock from the base game." href="./medical-supplies/" />
+  <LinkCard title="Growing and chemistry" description="Look up crops, reagents, and the machines that turn ingredients into clinic stock." href="./crafting-equipment/" />
 </div>

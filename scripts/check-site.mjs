@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import itemCategories from '../src/item-categories.json' with { type: 'json' };
 
 const dist = new URL('../dist/', import.meta.url);
 const base = new URL('https://nokroni.github.io/probably-stolen-doctor-wiki/');
@@ -26,7 +27,23 @@ function pathFor(url) {
 }
 
 const spoilers = /CHASE IT DOWN|Sentinel Collapse|Silva|S-17|Serpico|Eleanor|席尔瓦|希尔瓦|哨兵崩溃|哨兵病|赛尔皮科|埃莉诺/i;
+const itemPages = itemCategories.flatMap(({ items }) => items);
+assert.equal(new Set(itemPages).size, itemPages.length, 'An item family belongs to only one category');
+assert.deepEqual(pages.filter((route) => /^reference\/items\/[^/]+\/$/.test(route)).sort(),
+  itemCategories.flatMap(({ slug, items }) => [slug, ...items]).map((slug) => `reference/items/${slug}/`).sort(),
+  'Every item page belongs to the item catalog');
+
 for (const lang of ['', 'zh-cn/']) {
+  const index = new URL(`${lang}reference/items/`, base);
+  const indexHtml = readFileSync(pathFor(index), 'utf8');
+  for (const { slug, items } of itemCategories) {
+    assert(indexHtml.includes(`href="./${slug}/"`), `Item index must link to ${slug} in ${lang || 'en'}`);
+    const category = new URL(`${slug}/`, index);
+    const html = readFileSync(pathFor(category), 'utf8');
+    for (const item of items) {
+      assert(html.includes(`href="../${item}/"`), `${category} must list ${item}`);
+    }
+  }
   for (const route of pages) {
     const url = new URL(lang + route, base);
     const rendered = readFileSync(pathFor(url), 'utf8');
@@ -60,4 +77,4 @@ for (const file of snapshots) {
   const name = /([^\\/]+)\.webp$/.exec(file)?.[1];
   assert(name && citedCaptures.has(name), `Unused screenshot: ${file}`);
 }
-console.log(`Verified ${pages.length * 2} bilingual pages, ${snapshots.length} game captures, same-site links, search output and spoiler scan.`);
+console.log(`Verified ${pages.length * 2} bilingual pages, ${itemPages.length} item families per language, ${snapshots.length} game captures, same-site links, search output and spoiler scan.`);

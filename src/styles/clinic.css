@@ -94,18 +94,18 @@
 
 .wiki-comparison .wiki-shot { margin: 0; }
 
-:is(.symptom-list, .item-type-list) {
+.symptom-list {
   display: grid;
   gap: .4rem;
 }
 
-:is(.symptom-list, .item-type-list) > details {
+.symptom-list > details {
   margin: 0;
   border: 1px solid var(--sl-color-gray-5);
   background: var(--sl-color-bg-sidebar);
 }
 
-:is(.symptom-list, .item-type-list) > details > summary {
+.symptom-list > details > summary {
   min-height: 44px;
   padding: .6rem .85rem;
   cursor: pointer;
@@ -114,14 +114,11 @@
 }
 
 .symptom-choice > p { margin: .4rem .85rem .8rem; }
-:is(.symptom-list, .item-type-list) > details[open] { border-color: var(--sl-color-accent); }
-:is(.symptom-list, .item-type-list) > details > summary:focus-visible {
+.symptom-list > details[open] { border-color: var(--sl-color-accent); }
+.symptom-list > details > summary:focus-visible {
   outline: 2px solid var(--sl-color-accent);
   outline-offset: -2px;
 }
-
-.item-type-list ul { margin: 0 .85rem .8rem; padding-inline-start: 1.25rem; }
-.item-type-list li + li { margin-top: .4rem; }
 
 @media (max-width: 44rem) {
   .wiki-links { grid-template-columns: 1fr; }

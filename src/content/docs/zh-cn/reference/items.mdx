@@ -3,95 +3,15 @@ title: "物品与器材"
 description: "查询诊所器材、治疗耗材、制药原料，以及可在诊所使用的原版物品。"
 ---
 
-执照等级会开放相应器材的购买资格。一级发放入门器材架，从二级起，医疗器材商轮换带货。医疗舱物资箱有机会开出尚未达到购买等级的器材，高级器材较少见。接诊前把设备装上器材架，检查电源和配件。
+import { LinkCard } from '@astrojs/starlight/components';
 
-药品和耗材放在未锁住的自有库存里。成品先从生产机器取出来，床旁才能使用。确认前可以看见选中的批次和当前价格。
+先选物品类别。点进每一类的页面，就能查到怎么取得、在哪用，以及各个型号的区别。
 
-## 按物品分类浏览
-
-<div class="item-type-list">
-
-<details name="item-type">
-  <summary>诊所基础</summary>
-  <ul>
-    <li><a href="./clinic-documents/">执照与诊所文件</a></li>
-    <li><a href="./equipment-rack/">床旁器材架</a></li>
-    <li><a href="./medicine-cabinet/">药品收纳箱</a></li>
-    <li><a href="./power/">诊所供电</a></li>
-    <li><a href="./modules/">原版器材模组</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>监护与检查</summary>
-  <ul>
-    <li><a href="./monitors/">M2、M3 与 M4 监护仪</a></li>
-    <li><a href="./finger-probe/">指夹探头</a></li>
-    <li><a href="./blood-pressure/">血压袖带与动脉压传感器</a></li>
-    <li><a href="./thermometers/">体温计与连续体温监测仪</a></li>
-    <li><a href="./glucose-sampler/">血糖仪</a></li>
-    <li><a href="./twelve-lead/">十二导联心电图机</a></li>
-    <li><a href="./ultrasound/">便携超声仪</a></li>
-    <li><a href="./bedside-lab/">床旁检验仪</a></li>
-    <li><a href="./station-controller/">工作站控制模块</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>治疗器材</summary>
-  <ul>
-    <li><a href="./defibrillators/">AED 与手动除颤器</a></li>
-    <li><a href="./bag-mask/">呼吸囊和面罩</a></li>
-    <li><a href="./chest-compressor/">胸外按压机</a></li>
-    <li><a href="./syringe-tray/">注射盘</a></li>
-    <li><a href="./infusion-pump/">输液泵</a></li>
-    <li><a href="./ventilator/">转运呼吸机</a></li>
-    <li><a href="./blood-station/">输血台、普通血袋与蓝血</a></li>
-    <li><a href="./surgery-core/">自动手术机与外科工具</a></li>
-    <li><a href="./microscope-cradle/">显微托架</a></li>
-    <li><a href="./recovery-cot/">留观床</a></li>
-    <li><a href="./immune-regulator/">免疫调节模块</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>诊所药品</summary>
-  <ul>
-    <li><a href="./broadguard/">广谱抗感染包</a></li>
-    <li><a href="./glucorescue/">补糖包</a></li>
-    <li><a href="./clearflow/">补液包</a></li>
-    <li><a href="./pulselift/">循环支持包</a></li>
-    <li><a href="./heparin/">肝素</a></li>
-    <li><a href="./painease/">舒痛片</a></li>
-    <li><a href="./clinic-biogel/">诊所生物凝胶</a></li>
-    <li><a href="./pressor-bridge/">升压桥接剂</a></li>
-    <li><a href="./rhythm-buffer/">稳律缓冲剂</a></li>
-    <li><a href="./epinephrine/">肾上腺素</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>治疗耗材与原版物资</summary>
-  <ul>
-    <li><a href="./sterile-supplies/">无菌耗材</a></li>
-    <li><a href="./dressing-supplies/">绷带与敷料</a></li>
-    <li><a href="./wound-adjuncts/">伤口辅助用品与鱼类产物</a></li>
-    <li><a href="./native-pain-relief/">原版止痛针剂</a></li>
-    <li><a href="./native-infection-stock/">噬菌霉素与原版抗感染药</a></li>
-    <li><a href="./native-specialty-medicine/">原版专科与急救针剂</a></li>
-    <li><a href="./counter-stock/">原版物资、验货与采购</a></li>
-    <li><a href="./exposure-stock/">柜台商品与暴露证据</a></li>
-  </ul>
-</details>
-
-<details name="item-type">
-  <summary>种植与加工</summary>
-  <ul>
-    <li><a href="./clinic-crops/">诊所作物与基因</a></li>
-    <li><a href="./chemistry-tools/">原版化学器材</a></li>
-    <li><a href="./sterile-bench/">无菌配制台</a></li>
-    <li><a href="./clinic-reagents/">诊所试剂瓶</a></li>
-  </ul>
-</details>
-
+<div class="wiki-links">
+  <LinkCard title="开业与供电" description="查看执照、收纳器材、供电和设备模组。" href="./setup-power/" />
+  <LinkCard title="监护与诊断" description="对照监护仪、探头和各类检查设备。" href="./diagnostic-equipment/" />
+  <LinkCard title="治疗设备" description="查找通气、循环支持、输血、手术和留观设备。" href="./treatment-equipment/" />
+  <LinkCard title="诊所药品" description="查看各类诊所药品的作用和取得方法。" href="./clinic-medicine/" />
+  <LinkCard title="耗材与原版药品" description="查找敷料、无菌耗材和能用于诊所的原版物资。" href="./medical-supplies/" />
+  <LinkCard title="种植与化学" description="查找作物、试剂和配药需要的机器。" href="./crafting-equipment/" />
 </div>

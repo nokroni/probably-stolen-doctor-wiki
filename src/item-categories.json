@@ -1,0 +1,103 @@
+[
+  {
+    "slug": "setup-power",
+    "label": {
+      "en": "Clinic setup and power",
+      "zh-CN": "开业与供电"
+    },
+    "items": [
+      "clinic-documents",
+      "equipment-rack",
+      "medicine-cabinet",
+      "power",
+      "modules"
+    ]
+  },
+  {
+    "slug": "diagnostic-equipment",
+    "label": {
+      "en": "Monitoring and diagnosis",
+      "zh-CN": "监护与诊断"
+    },
+    "items": [
+      "monitors",
+      "finger-probe",
+      "blood-pressure",
+      "thermometers",
+      "glucose-sampler",
+      "twelve-lead",
+      "ultrasound",
+      "bedside-lab",
+      "station-controller"
+    ]
+  },
+  {
+    "slug": "treatment-equipment",
+    "label": {
+      "en": "Treatment equipment",
+      "zh-CN": "治疗设备"
+    },
+    "items": [
+      "defibrillators",
+      "bag-mask",
+      "chest-compressor",
+      "syringe-tray",
+      "infusion-pump",
+      "ventilator",
+      "blood-station",
+      "surgery-core",
+      "microscope-cradle",
+      "recovery-cot",
+      "immune-regulator"
+    ]
+  },
+  {
+    "slug": "clinic-medicine",
+    "label": {
+      "en": "Clinic medicine",
+      "zh-CN": "诊所药品"
+    },
+    "items": [
+      "broadguard",
+      "glucorescue",
+      "clearflow",
+      "pulselift",
+      "heparin",
+      "painease",
+      "clinic-biogel",
+      "pressor-bridge",
+      "rhythm-buffer",
+      "epinephrine"
+    ]
+  },
+  {
+    "slug": "medical-supplies",
+    "label": {
+      "en": "Supplies and native medicine",
+      "zh-CN": "耗材与原版药品"
+    },
+    "items": [
+      "sterile-supplies",
+      "dressing-supplies",
+      "wound-adjuncts",
+      "native-pain-relief",
+      "native-infection-stock",
+      "native-specialty-medicine",
+      "counter-stock",
+      "exposure-stock"
+    ]
+  },
+  {
+    "slug": "crafting-equipment",
+    "label": {
+      "en": "Growing and chemistry",
+      "zh-CN": "种植与化学"
+    },
+    "items": [
+      "clinic-crops",
+      "chemistry-tools",
+      "sterile-bench",
+      "clinic-reagents"
+    ]
+  }
+]
