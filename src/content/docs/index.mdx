@@ -1,0 +1,31 @@
+---
+title: Probably Stolen Doctor Wiki
+description: A spoiler-free player handbook for setting up and running your shop clinic in Probably Stolen.
+template: splash
+hero:
+  title: The shop clinic handbook
+  tagline: Set up your bedside, learn the controls, and look up the equipment you need for your next shift.
+  image:
+    file: ../../assets/clinic-monitor.png
+    alt: Pixel-art bedside monitor from the Doctor mod
+  actions:
+    - text: Start your first shift
+      link: /probably-stolen-doctor-wiki/start/first-shift/
+      icon: right-arrow
+      variant: primary
+    - text: 简体中文
+      link: /probably-stolen-doctor-wiki/zh-cn/
+      icon: translate
+      variant: secondary
+---
+
+import { LinkCard } from '@astrojs/starlight/components';
+
+<div class="wiki-links">
+  <LinkCard title="Find your way around the bedside" description="See where to attach sensors, use the body chart, and stop a procedure." href="./start/bedside/" />
+  <LinkCard title="Practice on a manikin" description="Work through a training-only dressing exercise at your own pace." href="./start/practice/" />
+  <LinkCard title="Items and equipment" description="Look up monitors, tools, medicine, crafting ingredients, and compatible base-game items." href="./reference/items/" />
+  <LinkCard title="Procedures" description="Find a control, check its requirements, and see how to confirm the action." href="./reference/procedures/" />
+</div>
+
+<p class="wiki-edition">Game guide for Doctor mod 0.17.40 · English and 简体中文</p>

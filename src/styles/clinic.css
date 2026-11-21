@@ -1,0 +1,87 @@
+:root {
+  --sl-font: 'Trebuchet MS', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --sl-font-mono: 'Cascadia Mono', Consolas, 'Noto Sans SC', monospace;
+  --sl-color-accent-low: #283823;
+  --sl-color-accent: #bcce77;
+  --sl-color-accent-high: #e5efb8;
+  --sl-color-white: #f4f2db;
+  --sl-color-gray-1: #e4e9d7;
+  --sl-color-gray-2: #c8d1c6;
+  --sl-color-gray-3: #a5b6ad;
+  --sl-color-gray-4: #6b857c;
+  --sl-color-gray-5: #3c5750;
+  --sl-color-gray-6: #263a35;
+  --sl-color-black: #172621;
+  --sl-content-width: 51rem;
+  --wiki-frame: #405951;
+  --wiki-plate: #1b2b25;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #e5ead1;
+  --sl-color-accent: #4b601e;
+  --sl-color-accent-high: #303c14;
+  --sl-color-white: #1a2c24;
+  --sl-color-gray-1: #30443a;
+  --sl-color-gray-2: #40584e;
+  --sl-color-gray-3: #50675c;
+  --sl-color-gray-4: #7b8b7e;
+  --sl-color-gray-5: #a9b6a7;
+  --sl-color-gray-6: #e2e8dd;
+  --sl-color-gray-7: #eff1e7;
+  --sl-color-black: #faf9ef;
+  --wiki-frame: #a5b09d;
+  --wiki-plate: #edf0df;
+}
+
+.site-title { font-weight: 800; }
+.site-title img { image-rendering: pixelated; }
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  margin-block: 1.25rem 1.5rem;
+  padding: clamp(1.35rem, 4vw, 3.25rem);
+  min-width: 0;
+  border: 1px solid var(--wiki-frame);
+  background: var(--wiki-plate);
+  box-shadow: inset 0 3px 0 var(--wiki-frame);
+}
+
+.hero::before {
+  position: absolute;
+  inset: 3px 0 0;
+  z-index: -1;
+  content: '';
+  background: url('../assets/clinic-room.png') center right / cover no-repeat;
+  image-rendering: pixelated;
+  opacity: .15;
+  mask-image: linear-gradient(90deg, transparent 12%, #000 88%);
+}
+
+.hero h1 { max-inline-size: 16ch; line-height: 1.02; }
+.hero .tagline { color: var(--sl-color-gray-2); max-inline-size: 38ch; }
+.hero img { image-rendering: pixelated; width: min(13rem, 52vw); height: auto; }
+.hero .sl-link-button { min-height: 44px; border-radius: .35rem; }
+
+.wiki-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: .75rem;
+}
+
+.wiki-links .sl-link-card { margin: 0; min-width: 0; background: var(--sl-color-bg-sidebar); }
+.wiki-links .sl-link-card:hover { border-color: var(--sl-color-accent); }
+.wiki-edition { color: var(--sl-color-gray-3); font-family: var(--sl-font-mono); font-size: .825rem; margin-block: 1.5rem; }
+.sl-markdown-content a:focus-visible, .site-title:focus-visible { outline: 2px solid var(--sl-color-accent); outline-offset: .15rem; }
+.sl-markdown-content table { font-size: .96rem; }
+.sl-markdown-content th { text-align: start; }
+.sl-markdown-content td { min-width: 9ch; }
+
+@media (max-width: 44rem) {
+  .wiki-links { grid-template-columns: 1fr; }
+  .hero { padding: 1.15rem; }
+  .hero h1 { max-inline-size: 22ch; }
+  .hero img { width: min(9rem, 44vw); }
+}

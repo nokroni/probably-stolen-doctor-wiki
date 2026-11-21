@@ -1,0 +1,128 @@
+---
+interface Props {
+  language?: 'en' | 'zh-CN';
+}
+
+const { language = 'en' } = Astro.props;
+const copy = language === 'zh-CN' ? {
+  title: '床旁界面示意',
+  body: '人体图',
+  sides: '屏幕左侧是病人的右侧',
+  monitor: '监护仪',
+  monitorDetail: '观察波形，确认读数是否更新',
+  hint: '我',
+  hintDetail: '不知道先做什么时，看左下角',
+  actions: '底部操作栏',
+  actionsDetail: '全身检查 · 药品 · 停止操作',
+} : {
+  title: 'Bedside layout at a glance',
+  body: 'Body chart',
+  sides: 'The patient’s right is on your left',
+  monitor: 'Monitor',
+  monitorDetail: 'Watch the waveforms and check when readings update',
+  hint: 'Me',
+  hintDetail: 'Look to the lower left for your next step',
+  actions: 'Bottom controls',
+  actionsDetail: 'Body exam · Medicines · Stop controls',
+};
+---
+
+<figure class="clinic-diagram" lang={language}>
+  <figcaption>{copy.title}</figcaption>
+  <div class="layout">
+    <div class="body tile">
+      <div class="outline" aria-hidden="true">
+        <i class="head"></i><i class="torso"></i><i class="left-arm"></i><i class="right-arm"></i>
+        <i class="left-leg"></i><i class="right-leg"></i>
+      </div>
+      <strong>{copy.body}</strong>
+      <span>{copy.sides}</span>
+    </div>
+    <div class="monitor tile">
+      <div class="monitor-label" aria-hidden="true"><span>ECG</span><span>SpO₂</span><span>NIBP</span></div>
+      <strong>{copy.monitor}</strong>
+      <span>{copy.monitorDetail}</span>
+    </div>
+    <div class="hint tile"><strong>{copy.hint}</strong><span>{copy.hintDetail}</span></div>
+    <div class="actions tile"><strong>{copy.actions}</strong><span>{copy.actionsDetail}</span></div>
+  </div>
+</figure>
+
+<style>
+  .clinic-diagram {
+    margin-inline: 0;
+    padding: 1rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: .7rem;
+    background: var(--sl-color-bg-sidebar);
+    color: var(--sl-color-text);
+  }
+
+  figcaption {
+    color: var(--sl-color-white);
+    font-weight: 700;
+    margin-block-end: .7rem;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem;
+  }
+
+  .tile {
+    display: grid;
+    align-content: center;
+    justify-items: start;
+    min-width: 0;
+    padding: .7rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: .4rem;
+    background: var(--sl-color-bg);
+    font-size: .875rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .tile strong {
+    color: var(--sl-color-white);
+    font-size: 1rem;
+  }
+
+  .body, .monitor { min-height: 9rem; }
+  .hint { border-color: var(--sl-color-text-accent); }
+
+  .monitor-label {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem .55rem;
+    margin-block-end: .6rem;
+    padding: .35rem .45rem;
+    border-radius: .25rem;
+    background: #182520;
+    color: #bde5cd;
+    font-size: .72rem;
+    font-family: var(--sl-font-mono);
+  }
+
+  .outline {
+    display: grid;
+    grid-template-columns: .5rem .75rem .75rem .5rem;
+    grid-template-rows: .9rem 1.2rem 1.25rem;
+    gap: .125rem;
+    margin-block-end: .45rem;
+  }
+
+  .outline i { background: var(--sl-color-gray-2); border-radius: .3rem; }
+  .outline .head { grid-area: 1 / 2 / 2 / 4; justify-self: center; width: .9rem; border-radius: .45rem; }
+  .torso { grid-area: 2 / 2 / 3 / 4; }
+  .left-arm { grid-area: 2 / 1 / 3 / 2; rotate: 8deg; }
+  .right-arm { grid-area: 2 / 4 / 3 / 5; rotate: -8deg; }
+  .left-leg { grid-area: 3 / 2 / 4 / 3; }
+  .right-leg { grid-area: 3 / 3 / 4 / 4; }
+
+  @media (max-width: 26rem) {
+    .clinic-diagram { padding: .7rem; }
+    .tile { padding: .55rem; }
+  }
+</style>

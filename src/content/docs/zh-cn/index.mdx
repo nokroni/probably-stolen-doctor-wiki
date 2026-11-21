@@ -1,0 +1,31 @@
+---
+title: Probably Stolen 医生模组 Wiki
+description: 无剧透的医生模组玩家手册，介绍如何布置床旁设备、经营店内诊所。
+template: splash
+hero:
+  title: 店内诊所手册
+  tagline: 布置床旁设备，熟悉操作，出诊前查一查要用的器材和药品。
+  image:
+    file: ../../../assets/clinic-monitor.png
+    alt: 医生模组中的像素风床旁监护仪
+  actions:
+    - text: 开始第一班
+      link: /probably-stolen-doctor-wiki/zh-cn/start/first-shift/
+      icon: right-arrow
+      variant: primary
+    - text: English
+      link: /probably-stolen-doctor-wiki/
+      icon: translate
+      variant: secondary
+---
+
+import { LinkCard } from '@astrojs/starlight/components';
+
+<div class="wiki-links">
+  <LinkCard title="认识床旁界面" description="看图找人体部位、监护探头和停止操作的按钮。" href="./start/bedside/" />
+  <LinkCard title="用训练假人练习" description="按自己的节奏练习包扎，熟悉检查到结束的流程。" href="./start/practice/" />
+  <LinkCard title="物品与设备" description="查询监护仪、医疗器材、药品、制备材料和可兼容的原版物品。" href="./reference/items/" />
+  <LinkCard title="床旁操作" description="查找操作入口，需要的器材和确认方式。" href="./reference/procedures/" />
+</div>
+
+<p class="wiki-edition">适用医生模组 0.17.40 · 简体中文与 English</p>
