@@ -7,18 +7,18 @@ import WikiShot from '../../../../components/WikiShot.astro';
 
 1. Fit a monitor in the rack and connect a charged Energy Cell or an eligible power source.
 2. At the chest, use **Attach ECG**. Connect the finger probe and cuff at their own body sites.
-3. Read ECG and HR together, then the pulse waveform and SpO₂. NIBP is the last cuff reading. M4 also has separate channels for attached ABP and CO₂ equipment.
+3. Read ECG and HR together, then the pulse waveform and SpO₂. NIBP shows the last completed cuff reading. M3 and M4 can display live ABP from a connected, zeroed arterial line.
 4. Use **Save ECG** on M3 or M4 with a readable signal. After a shock, wait for the sweep to return and check the pulse before drawing conclusions.
 
-An unconnected sensor leaves its channel blank. Upgrade to M3 for strip memory and a 12-lead setup, or to M4 for automatic cuff cycles and advanced channels. The medical supplier brings upgrades from their purchase grade onward.
+An unconnected sensor leaves its channel blank. On the M4, a powered ventilator and connected CO₂ sampling line can show EtCO₂ during spontaneous breathing as well as assisted ventilation. The medical supplier brings upgrades from their purchase grade onward.
 
 ## Items and sources
 
 | Item | Grade | What it does |
 | --- | --- | --- |
 | M2 bedside monitor | I | Starter monitor with live ECG, pulse oximetry and on-demand cuff pressure after connecting the appropriate leads and sensors. |
-| M3 diagnostic monitor | II | Adds short ECG strip capture and memory to the basic monitoring channels. |
-| M4 critical care monitor | III | Adds automatic cuff cycles and supports advanced channels from connected equipment, including ABP and EtCO₂. Accepts native modules. |
+| M3 diagnostic monitor | II | Adds short ECG strip capture and memory. Supports live ABP with the arterial transducer and diagnostic ECG with the 12-lead recorder. |
+| M4 critical care monitor | III | Includes the M3 capabilities and adds automatic cuff cycles, EtCO₂, and a continuous temperature readout with the corresponding equipment. Has a native module bay. |
 
 ## Related pages
 
@@ -36,6 +36,10 @@ An unconnected sensor leaves its channel blank. Upgrade to M3 for strip memory a
 
 <WikiShot name="m2-unattached" version="0.17.40" alt="M2 shows LEADS OFF, PROBE OFF, and a blank NIBP reading" caption="On the M2, leads and the finger probe enable different rows. The bottom NIBP field shows the last completed cuff reading." />
 
-<WikiShot name="m4-channels" version="0.17.39" alt="M4 displays an active EtCO₂ waveform while ECG, pleth, and ABP are blank" caption="With a sampling line and supported breathing, M4 draws EtCO₂ in its own row. Unconnected channels remain blank." />
+<WikiShot name="m3-unattached" version="0.17.33" alt="M3 face with ECG, pleth, ABP and cuff rows before sensors are attached" caption="M3 has a separate ABP row below pleth. Once the arterial transducer is connected and zeroed, that row displays a continuous pressure trace." />
+
+<WikiShot name="m4-channels" version="0.17.39" alt="M4 displays an active EtCO₂ waveform while ECG, pleth, and ABP are blank" caption="With a powered ventilator and connected sampling line, M4 draws EtCO₂ in its own row. Unconnected channels remain blank." />
+
+<WikiShot name="m4-live" version="0.17.35" alt="M4 with live ECG, pleth and EtCO₂ waves, a cuff reading, and an empty ABP channel" caption="Here ECG and pleth are both readable and HR and PR agree. NIBP holds the previous cuff value while the next cycle runs." />
 
 </div>
