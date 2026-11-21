@@ -12,6 +12,9 @@
   --sl-color-gray-5: #3c5750;
   --sl-color-gray-6: #263a35;
   --sl-color-black: #172621;
+  --sl-color-blue-low: #243f37;
+  --sl-color-blue: #83b8a6;
+  --sl-color-blue-high: #c9e9e0;
   --sl-content-width: 51rem;
   --wiki-frame: #405951;
   --wiki-plate: #1b2b25;
@@ -30,6 +33,9 @@
   --sl-color-gray-6: #e2e8dd;
   --sl-color-gray-7: #eff1e7;
   --sl-color-black: #faf9ef;
+  --sl-color-blue-low: #e0ede3;
+  --sl-color-blue: #34776a;
+  --sl-color-blue-high: #163d33;
   --wiki-frame: #a5b09d;
   --wiki-plate: #edf0df;
 }
@@ -81,6 +87,7 @@
 
 @media (max-width: 44rem) {
   .wiki-links { grid-template-columns: 1fr; }
+  .site-title { font-size: clamp(.85rem, 3.95vw, 1.1rem); }
   .hero { padding: 1.15rem; }
   .hero h1 { max-inline-size: 22ch; }
   .hero img { width: min(9rem, 44vw); }
