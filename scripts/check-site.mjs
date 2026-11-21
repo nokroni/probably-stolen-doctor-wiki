@@ -65,7 +65,13 @@ for (const file of files(outputPath).filter((path) => path.endsWith('.html') && 
   for (const [, link] of html.matchAll(/<(?:a|link|img|script)\b[^>]*?\b(?:href|src)="([^"]+)"/g)) {
     const url = new URL(link.replaceAll('&amp;', '&'), page);
     if (url.origin !== base.origin) continue;
-    assert(existsSync(pathFor(url)), `Broken local link on ${page}: ${link}`);
+    const target = pathFor(url);
+    assert(existsSync(target), `Broken local link on ${page}: ${link}`);
+    if (url.hash && target.pathname.endsWith('.html')) {
+      const id = decodeURIComponent(url.hash.slice(1));
+      const linked = target.href === pathFor(page).href ? html : readFileSync(target, 'utf8');
+      assert(linked.includes(` id="${id}"`), `Missing page section on ${page}: ${link}`);
+    }
   }
 }
 
