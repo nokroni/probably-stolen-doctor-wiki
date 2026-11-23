@@ -1,0 +1,33 @@
+---
+title: How to read EtCO₂
+description: Read the carbon dioxide number, breath rate, and waveform shape together.
+---
+
+import WikiShot from '../../../../components/WikiShot.astro';
+
+**EtCO₂** measures the pressure of carbon dioxide in the gas at the end of an exhalation. Its unit is **mmHg**. **35–45 mmHg** is a common adult reference range during steady breathing. The value depends on ventilation and how much blood reaches the lungs. **RR** is the number of breaths per minute. A breath usually draws a rise, a plateau, and a return to baseline. [Capnography clinical reference](https://www.ncbi.nlm.nih.gov/books/NBK539754/) · [American Association for Respiratory Care guideline](https://www.aarc.org/wp-content/uploads/2014/08/04.11.0503.pdf)
+
+In the game, fit and power the **M4 and ventilator**. Go to **Instruments → Support** and fit the CO₂ line. It can sample the patient's own breaths with the ventilator stopped. Wait for a full exhalation and look for several waves before interpreting them.
+
+<div class="wiki-comparison">
+
+<WikiShot name="capno-regular" version="0.17.39" alt="Flat-topped CO₂ waves at EtCO₂ 36 mmHg and RR 16" caption="Flat tops. EtCO₂ is 36 and RR is 16." />
+
+<WikiShot name="capno-airway" version="0.17.39" alt="Sloping, shark-fin CO₂ waves at EtCO₂ 36 mmHg and RR 28" caption="Shark fins. EtCO₂ is also 36, but exhalation slopes up and the breaths are closer together." />
+
+</div>
+
+| What changes in the game | What to check next |
+| --- | --- |
+| Slow rise and a sloped top, like a shark fin | Airflow may be restricted. Examine the chest for wheezing or difficult exhalation and compare what the patient says. |
+| Short, closely spaced waves | Breaths may be shallow and fast. Compare chest rise and sounds on both sides, then look at temperature and SpO₂. |
+| Low waves with the plateau still visible | Check breathing, wrist pulse, and current pressure. Reduced blood flow to the lungs can also lower EtCO₂. |
+| High EtCO₂ with slow breathing | Check chest movement and how well the patient is breathing. Check the mask and circuit if they're in use. |
+| Trace vanishes or the number becomes dashes | Check whether the patient is breathing, then check the line and mask. After reconnecting, wait for a complete sampled breath. |
+| EtCO₂ climbs during CPR or rises suddenly and stays up | Blood flow to the lungs may have improved. Look for a returning wrist pulse and blood pressure to confirm the patient's own circulation. |
+
+Compare the trend across several breaths. Ventilation, blood flow, and compression quality can all affect the reading during CPR. [AHA adult advanced life support](https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support/)
+
+<WikiShot name="capno-pneumonia" version="0.17.39" alt="Short CO₂ plateaus with EtCO₂ 29 mmHg and RR 24" caption="Short, closely spaced breaths. Use the chest exam, temperature, and symptoms such as cough to narrow down the cause." />
+
+[Monitor overview](../) · [Transport ventilator](../../../reference/items/ventilator/) · [Missing readings](../../../reference/conditions/symptoms/monitor-signals/)

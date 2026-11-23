@@ -1,0 +1,46 @@
+---
+title: 心电图怎么看
+description: 从波形的间距、宽窄和形状入手，再用脉搏和血压复核。
+---
+
+import WikiShot from '../../../../../components/WikiShot.astro';
+
+## 先认一拍，再看一排
+
+看 ECG 一排里连续几拍。正常窦性心律通常是一个小的 **P 波**，接一个尖的 **QRS 波群**，然后是一段较平的 **ST 段**和一个较圆的 **T 波**。P 波来自心房的电活动，QRS 来自心室的电活动，T 波对应心室电活动的恢复。先找最明显的 QRS，再比较它们的间距和宽窄。[皇家帕普沃斯医院心电图指南](https://www.royalpapworth.nhs.uk/our-services/cardiology/cardiac-assessment/electrocardiogram-ecg)
+
+<WikiShot name="m4-live" version="0.17.35" alt="M4 的 ECG 一栏显示规则间隔的窄尖波，下一行显示脉搏波" caption="盯住最上面 ECG 一栏的尖波，数几个间隔。再往下看指夹脉搏波。两排都有信号时，可以比一下 HR 和 PR。" />
+
+| 练习中看到的图形 | 可以想到什么 |
+| --- | --- |
+| 规则的小波、窄尖波、圆波反复出现 | **窦性心律**。同样的轮廓可以更快或更慢，结合心率和症状看。 |
+| 窄尖波又快又齐，小 P 波不容易看见 | 游戏里常见于**室上性心动过速（SVT）**。去摸脉，再看血压。 |
+| 尖波之间忽长忽短，看不出规律的 P 波 | **心房颤动（AF）**的线索。指夹脉率可能比心电心率低。 |
+| 连着一串快而宽的波 | 想到**室性心动过速（VT）**。游戏里的室速可以向上、向下、带切迹，也会出现起伏连在一起的 V–U–V 形。 |
+| 波形杂乱，找不到一拍一拍的尖波 | **心室颤动（VF）**的线索。心率可能显示破折号，马上去查病人和脉搏。 |
+| 可靠的波形接近直线，摸不到脉搏 | 想到**心脏停搏**。先确认导联已接好，而且屏幕没有处在放电后的恢复阶段。 |
+| 看得出规律，手腕却摸不到脉搏 | 可能是**无脉性电活动（PEA）**。屏幕有电活动，循环仍然可能停着。去看游戏的急救提示。 |
+
+游戏里，遇到快心律先摸手腕，再结合能取得的血压和床旁提示。室速或室颤与室上速或房颤的电击模式由情境和设备区分。[游戏中的心律与心脏骤停](../../../reference/conditions/rhythms/) · [美国心脏协会心动过速介绍](https://www.heart.org/en/health-topics/arrhythmia/about-arrhythmia/tachycardia--fast-heart-rate/) · [心房颤动指南](https://www.heart.org/en/health-topics/atrial-fibrillation/why-atrial-fibrillation-af-or-afib-matters) · [成人高级生命支持](https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support/)
+
+## 对着游戏画面看波形
+
+<div class="wiki-comparison">
+
+<WikiShot name="ecg-vt-downstroke" version="0.17.87" alt="一串快速重复的宽波，主波向下" caption="这段室速的主波朝下，仍然能看出同一个形状在反复出现。" />
+
+<WikiShot name="ecg-vt-rounded" version="0.17.87" alt="一串快速重复的宽波，波谷圆钝" caption="这段也是室速，波谷较圆，宽波一个接一个连在一起。" />
+
+<WikiShot name="ecg-vf" version="0.17.34" alt="绿色心电波形杂乱，亮起 RHYTHM 警报，HR 显示破折号" caption="室颤。整段波形都在乱动，分不出一拍一拍的心跳。" />
+
+<WikiShot name="ecg-pulse-absent" version="0.17.33" alt="心电有规律，HR 为 44，脉搏波一栏提示 AWAIT PULSE，血氧和脉率为破折号" caption="心电上有每分钟 44 次电活动。下面显示 AWAIT PULSE，这时再摸一下手腕。" />
+
+</div>
+
+## 胸痛时看 ST 段
+
+ST 段在尖波之后、圆圆的 T 波之前。相对于前一段基线抬高，是游戏中值得追查的线索。有胸痛等可疑表现时，即使床旁心电看不出抬高，设备允许的话也要采集**十二导联**。它能换几个角度看同一颗心脏。病人的症状变了，就再看一张新的报告，对照采集时间。[胸痛评估指南](https://professional.heart.org/en/-/media/PHD-Files-2/Science-News/2/2021/2021-Chest-Pain-Guideline-Slide-Set-PDF-102821.pdf) · [游戏中的十二导联记录仪](../../../reference/items/twelve-lead/)
+
+<WikiShot name="twelve-lead-printout" version="0.17.35" alt="十二导联报告上有标明名称的多排波形，顶部标注采集时间" caption="报告里每个导联都有自己的波形和基线。先看采集时间，再看报告标出的区域。" />
+
+[监护仪读数总览](../) · [监护和诊断仪器](../../../reference/procedures/monitoring/)

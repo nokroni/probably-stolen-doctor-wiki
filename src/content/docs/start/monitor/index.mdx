@@ -1,0 +1,31 @@
+---
+title: Read the bedside monitor
+description: Read the waves, numbers, and alarms, then decide what to check next.
+---
+
+import WikiShot from '../../../../components/WikiShot.astro';
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+Each row on the monitor answers a different question. Check that the sensor has a signal, then compare the reading with the patient's breathing, pulse, and response. These guides show game examples alongside common adult reference ranges. The clinic uses its own readings and prompts to guide care.
+
+<WikiShot name="m4-live" version="0.17.35" alt="M4 shows live ECG, pleth and carbon dioxide waves, an empty arterial pressure row, and a cuff reading at the bottom" caption="Read down the screen from ECG to PLETH, ABP, EtCO₂, and NIBP. The arterial-pressure row is blank here, while the cuff reading is still available." />
+
+In this frame, HR and PR both read **79 bpm** and SpO₂ is **97%**. **115/74** is the cuff result from **5 seconds ago**. The cuff is already measuring again (**MEAS**). Use the next result if you're checking for a change.
+
+| Screen label | What you’re looking at |
+| --- | --- |
+| **ECG / HR** | Electrical activity and heart rate. Compare the timing and shape of several beats. |
+| **PLETH / SpO₂ / PR** | The finger probe's pulse wave, estimated oxygen saturation, and pulse rate. Check the wave before relying on the number. |
+| **ABP** | Beat-to-beat arterial pressure on the M3 or M4 after connecting and zeroing the transducer. |
+| **EtCO₂ / RR** | Exhaled carbon dioxide at the end of a breath and the measured breaths per minute. The connected M4 draws a wave for each sampled breath. |
+| **NIBP** | The last completed cuff pressure. Check the reading's age. |
+
+If you see **LEADS OFF**, **PROBE OFF**, dashes, or a question mark, check that sensor's connections, power, and signal. An alarm can flag an equipment problem. Compressions can distort ECG, and **RESTORING** marks a brief gap after a shock. While the trace comes back, reassess circulation. The ECG can beep even when there's no felt pulse.
+
+<CardGrid>
+  <LinkCard title="How to read an ECG" description="Recognize common rhythms, find the ST segment, and confirm what the pulse is doing." href="./ecg/" />
+  <LinkCard title="How to read EtCO₂" description="Compare flat-topped, shark-fin, and short, closely spaced breaths." href="./capnography/" />
+  <LinkCard title="Heart rate, pressure, SpO₂, and glucose" description="Understand the numbers, units, adult reference ranges, and when to recheck." href="./vitals/" />
+</CardGrid>
+
+[At the bedside](../bedside/) · [Monitoring and diagnostic controls](../../reference/procedures/monitoring/)

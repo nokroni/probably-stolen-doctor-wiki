@@ -1,0 +1,46 @@
+---
+title: How to read an ECG
+description: Learn what the main waves mean, then compare beat spacing, width, and shape with the pulse.
+---
+
+import WikiShot from '../../../../components/WikiShot.astro';
+
+## Start with one beat
+
+Look at several beats on the ECG row. In a typical sinus beat, a small **P wave** comes first as the upper chambers activate. The sharp **QRS complex** marks the activation of the lower chambers. After QRS comes the flatter **ST segment**, then the rounded **T wave** as the lower chambers electrically reset. Pick out the QRS peaks first, then compare their width and the gaps between them. [Royal Papworth Hospital ECG guide](https://www.royalpapworth.nhs.uk/our-services/cardiology/cardiac-assessment/electrocardiogram-ecg)
+
+<WikiShot name="m4-live" version="0.17.35" alt="M4 ECG row shows narrow peaks at regular intervals above a separate pleth wave" caption="Start at the green ECG row and follow several of its sharp peaks. Then look at the pulse wave in the row below. When both signals are readable, compare HR with PR." />
+
+| What you see in the game | What it can suggest |
+| --- | --- |
+| Regular timing, a small wave, a narrow spike, then a rounded wave | **Sinus rhythm**. The same shape can run faster or slower. Read the rate with the patient's symptoms. |
+| Very fast, regular, narrow spikes with the P waves hard to see | A common game pattern for **supraventricular tachycardia (SVT)**. Check the pulse and pressure. |
+| Uneven spacing with no consistent P waves | A clue to **atrial fibrillation (AF)**. The finger probe can count fewer pulses than the ECG counts beats. |
+| A run of fast, wide beats | Consider **ventricular tachycardia (VT)**. In the game it can turn upward, downward, look notched, or form a connected V–U–V shape. |
+| Chaotic activity with no clear separate beats | A clue to **ventricular fibrillation (VF)**. HR may show dashes. Check the patient and pulse promptly. |
+| A readable near-flat line with no pulse | Consider **asystole**. Verify the leads and look for **RESTORING** after a shock before interpreting the trace. |
+| An organized ECG with no wrist pulse | **Pulseless electrical activity (PEA)** is possible. Electrical activity can continue even when the heart fails to move enough blood. Follow the in-game resuscitation prompt. |
+
+For fast rhythms, check the wrist, current pressure when available, and the bedside hint. The mod's shock modes and eligibility depend on the rhythm and situation. [In-game rhythm care](../../../reference/conditions/rhythms/) · [AHA on fast rhythms](https://www.heart.org/en/health-topics/arrhythmia/about-arrhythmia/tachycardia--fast-heart-rate/) · [AHA on atrial fibrillation](https://www.heart.org/en/health-topics/atrial-fibrillation/why-atrial-fibrillation-af-or-afib-matters) · [AHA adult advanced life support](https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support/)
+
+## Compare the shapes
+
+<div class="wiki-comparison">
+
+<WikiShot name="ecg-vt-downstroke" version="0.17.87" alt="Fast repeating wide ECG complexes with a deep downward stroke" caption="VT with a deep downstroke. Look for a repeating pattern even when the biggest deflection points down." />
+
+<WikiShot name="ecg-vt-rounded" version="0.17.87" alt="Fast repeating wide ECG complexes with rounded troughs" caption="VT with rounded troughs. The fast, wide shapes run together." />
+
+<WikiShot name="ecg-vf" version="0.17.34" alt="Disorganized green ECG trace with RHYTHM alarm and no numerical HR" caption="VF. The wave is irregular throughout and you can't count individual beats." />
+
+<WikiShot name="ecg-pulse-absent" version="0.17.33" alt="Organized ECG at 44 bpm, with AWAIT PULSE and dashes for SpO₂ and PR" caption="The monitor sees a rhythm at 44 bpm. It shows AWAIT PULSE on the pleth row, so check the wrist for a pulse." />
+
+</div>
+
+## Look at the ST segment when chest pain is concerning
+
+Find the short section between the QRS spike and T wave. A rise above the baseline is a clue worth investigating. When the patient has concerning chest symptoms, use the game's **12-lead** if fitted, even if the bedside ST segment looks flat. The printout views the heart from several angles. If symptoms change, collect a fresh printout and compare capture times. [AHA/ACC chest pain guideline](https://professional.heart.org/en/-/media/PHD-Files-2/Science-News/2/2021/2021-Chest-Pain-Guideline-Slide-Set-PDF-102821.pdf) · [In-game 12-lead recorder](../../../reference/items/twelve-lead/)
+
+<WikiShot name="twelve-lead-printout" version="0.17.35" alt="Twelve labeled ECG views with a capture time at the top" caption="Each lead has its own trace and baseline. Read the capture age before comparing the regions on the printout." />
+
+[Monitor overview](../) · [Monitoring and diagnostic controls](../../../reference/procedures/monitoring/)

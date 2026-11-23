@@ -1,0 +1,31 @@
+---
+title: 读懂床旁监护仪
+description: 看懂屏幕上的波形、数字和警报，再决定下一步检查什么。
+---
+
+import WikiShot from '../../../../../components/WikiShot.astro';
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+监护仪上的每一排都在回答一个不同的问题。先看信号接好了没有，再看病人当下的呼吸、脉搏和反应。下面用游戏里的读数举例，并标出常见的成人参考值。游戏内以病人的表现和床旁提示为准。
+
+<WikiShot name="m4-live" version="0.17.35" alt="M4 监护仪的心电、脉搏波和二氧化碳波形正在走纸，动脉压一栏空着，底部有袖带血压" caption="从上往下看 ECG、PLETH、ABP、EtCO₂ 和 NIBP。这张图的动脉压一栏没有接上，底部的袖带血压仍然可读。" />
+
+图中心率和脉率都是 **79 次/分**，血氧是 **97%**。底部的 **115/74** 是 **5 秒前**测到的袖带血压。旁边的 **MEAS** 表示新一轮正在测。想知道血压有没有变，就等新结果。
+
+| 屏幕上写着 | 怎么看 |
+| --- | --- |
+| **ECG / HR** | 心脏的电活动和心率。每分钟跳多少次、跳得齐不齐，都可以从这排看。 |
+| **PLETH / SpO₂ / PR** | 指夹测到的脉搏波、血氧饱和度和脉率。先看脉搏波是否可靠，再看数字。 |
+| **ABP** | 动脉压。M3、M4 接好动脉压传感器并调零后，可以逐拍看血压变化。 |
+| **EtCO₂ / RR** | 呼气末二氧化碳和呼吸频率。M4 接好采样管后，每次有效呼气会留一段波形。 |
+| **NIBP** | 袖带测的血压。看的是上一轮的结果，测量时间也要一起看。 |
+
+看到 **LEADS OFF**、**PROBE OFF**、破折号或问号时，先查对应的接线、电量和信号。警报也可能在提醒你检查设备。按压会干扰心电，放电后出现 **RESTORING** 时，等波形恢复，同时重新看病人的循环。有心电声时，也可能摸不到脉搏。
+
+<CardGrid>
+  <LinkCard title="心电图怎么看" description="分清常见心律，认识 ST 段，学会用脉搏复核。" href="./ecg/" />
+  <LinkCard title="呼气末二氧化碳怎么看" description="比较平顶、鱼鳍状和又短又密的 CO₂ 波形。" href="./capnography/" />
+  <LinkCard title="心率、血压、血氧和血糖" description="看懂常见数值、单位和需要复查的变化。" href="./vitals/" />
+</CardGrid>
+
+[床旁怎么操作](../bedside/) · [监护和诊断仪器](../../reference/procedures/monitoring/)

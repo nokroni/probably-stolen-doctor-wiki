@@ -1,0 +1,36 @@
+---
+title: Heart rate, pressure, SpO₂, and glucose
+description: Understand the numbers, common adult reference ranges, and when to take a fresh reading in the game.
+---
+
+import WikiShot from '../../../../components/WikiShot.astro';
+
+## Heart rate and pulse rate
+
+| Reading | What it tells you |
+| --- | --- |
+| **HR, bpm** | Beats per minute. Most adults at rest are around **60–100 bpm**. The game gets HR from the ECG. With a high number, compare the rhythm shape and clues such as pain, fever, or blood loss. |
+| **PR, bpm** | Pulse rate measured at the finger. If it differs from ECG HR, look for a steady pleth wave, check the clip, and feel the wrist pulse. |
+| **SpO₂, %** | Estimated oxygen saturation from the finger probe. Most healthy people read **95–100%**. If the number falls, check breathing and probe quality. Severe blood loss can limit oxygen delivery even with a reassuring saturation. |
+
+[AHA resting heart rate](https://www.heart.org/en/healthy-living/exercise-and-physical-activity/fitness-basics/target-heart-rates) · [FDA pulse oximeter basics](https://www.fda.gov/consumers/consumer-updates/pulse-oximeter-basics)
+
+A slow resting rate is called **bradycardia**, and a fast one is called **tachycardia**. In the game, a slow rate with dizziness, a weak pulse, or falling pressure calls for a closer look. A rapid rate with a good pulse and pressure leaves you time to check whether the patient is in pain, feverish, or showing an abnormal rhythm. [AHA on fast heart rate](https://www.heart.org/en/health-topics/arrhythmia/about-arrhythmia/tachycardia--fast-heart-rate/)
+
+## Blood pressure
+
+In **118/76 mmHg**, **118** is systolic pressure, measured as the heart pumps. **76** is diastolic pressure, between beats. A common adult reference is systolic below **120** and diastolic below **80**. Readings below **90/60 mmHg** are commonly described as low. The patient's symptoms and the direction the pressure is moving matter too. [AHA blood pressure numbers](https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/) · [AHA on low blood pressure](https://www.heart.org/en/health-topics/high-blood-pressure/the-facts-about-high-blood-pressure/low-blood-pressure-when-blood-pressure-is-too-low/)
+
+In the game, **NIBP** remembers the last cuff measurement. **ABP** is live when the arterial line is working. Suppose the cuff showed **118/76** earlier, and now the patient is dizzy and the pulse is weak. Run another cuff cycle or look at current ABP. Falling pressure with an organized ECG can still point to trouble with circulation. Look for other clues such as bleeding or infection. After a rhythm change, recheck the pulse and give pressure time to respond. A reading like **145/92** is high for a resting adult. If you see it in the clinic, compare it with the patient's pain, symptoms, and repeat readings.
+
+<WikiShot name="m4-live" version="0.17.35" alt="M4 shows the last cuff reading along the bottom while the ABP channel is blank" caption="NIBP is the last cuff result. It updates when a new cycle completes. Live ABP has its own row." />
+
+## Fingerstick glucose
+
+Low blood glucose, or **hypoglycemia**, means blood sugar has fallen below a healthy level. For many people with diabetes, a common cutoff is **below 70 mg/dL (about 3.9 mmol/L)**. The game uses **mmol/L**. A **2.6** reading fits clues such as sweating, shaking, weakness, or confusion. A reading of **5.2** sends you looking for another explanation. [NIDDK low blood glucose guide](https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia)
+
+On a usable hand, select **Check glucose**. You can also find it under **Diagnostics** with a fitted sampler. Glucose rises gradually after the in-game treatment. Take a fresh reading and run another **Body exam**. If one-sided grip or speech symptoms remain after the glucose comes up, continue investigating them. If the sampler is missing, some visits offer **Refer without glucose test**.
+
+<WikiShot name="glucose-fingertip" version="0.17.40" alt="Hand actions show Check glucose and confirm that the completed reading was recorded" caption="Glucose is a one-off reading. Run the check again to see the current value." />
+
+[Monitor overview](../) · [Pressure equipment](../../../reference/items/blood-pressure/) · [Glucose sampler](../../../reference/items/glucose-sampler/)

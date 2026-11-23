@@ -31,7 +31,16 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Play guide', translations: { 'zh-CN': '游玩指南' },
-          items: [{ slug: 'start/first-shift' }, { slug: 'start/bedside' }, { slug: 'start/practice' }],
+          items: [
+            { slug: 'start/first-shift' },
+            { slug: 'start/bedside' },
+            {
+              label: 'Monitor readings', translations: { 'zh-CN': '监护仪读数' }, collapsed: true,
+              items: ['start/monitor', 'start/monitor/ecg', 'start/monitor/capnography', 'start/monitor/vitals']
+                .map((slug) => ({ slug })),
+            },
+            { slug: 'start/practice' },
+          ],
         },
         {
           label: 'Reference', translations: { 'zh-CN': '资料索引' },

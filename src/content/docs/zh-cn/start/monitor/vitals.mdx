@@ -1,0 +1,36 @@
+---
+title: 心率、血压、血氧和血糖
+description: 常见生命体征的单位、成人参考值，以及游戏里什么时候该复查。
+---
+
+import WikiShot from '../../../../../components/WikiShot.astro';
+
+## 心率和脉率
+
+| 读数 | 含义和游戏里的用法 |
+| --- | --- |
+| **HR，bpm** | 每分钟心跳次数。多数成人静息时约 **60–100 次/分**。游戏用心电波形算 HR。心率高时，可结合疼痛、发热、失血等线索和心电的形状判断。 |
+| **PR，bpm** | 指夹从手指测到的脉率。和 HR 差很多时，看脉搏波是否稳定、指夹是否松动，再摸一下手腕。 |
+| **SpO₂，%** | 指夹估测的血氧饱和度。多数健康人约 **95–100%**。如果读数往下掉，看看病人的呼吸和探头信号。即使血氧数字好看，严重失血也可能让身体得不到足够的氧。 |
+
+[美国心脏协会心率参考](https://www.heart.org/en/healthy-living/exercise-and-physical-activity/fitness-basics/target-heart-rates) · [美国食品药品监督管理局血氧仪介绍](https://www.fda.gov/consumers/consumer-updates/pulse-oximeter-basics)
+
+静息心率太慢叫**心动过缓**，太快叫**心动过速**。游戏里如果心跳慢，人又发晕、脉搏弱或血压往下掉，要尽快复查。心跳快但脉搏、血压都还稳时，可以看看病人疼不疼、有没有发热，心电上又是什么形状。[美国心脏协会心动过速介绍](https://www.heart.org/en/health-topics/arrhythmia/about-arrhythmia/tachycardia--fast-heart-rate/)
+
+## 血压
+
+比如 **118/76 mmHg**。前面的 **118** 是收缩压，对应心脏泵血时的压力。后面的 **76** 是舒张压，对应两次心跳之间的压力。成人常见参考是收缩压低于 **120**、舒张压低于 **80**。**90/60 mmHg 以下**常作为低血压的参考，看见偏低的数字时，要结合病人的反应和变化趋势。[美国心脏协会血压读数](https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/) · [低血压介绍](https://www.heart.org/en/health-topics/high-blood-pressure/the-facts-about-high-blood-pressure/low-blood-pressure-when-blood-pressure-is-too-low/)
+
+在游戏里，**NIBP** 留着上一次袖带的结果，**ABP** 则随动脉压逐拍更新。比如刚才袖带是 **118/76**，现在病人发晕、脉搏变弱，就再测一次。假如血压在掉而心电仍齐，查失血、感染和其他循环问题。心律转过来后也记得摸脉，血压可能晚一些才跟上。**145/92** 对静息成人来说偏高，游戏里可以结合当下的疼痛、症状和复查结果一起看。
+
+<WikiShot name="m4-live" version="0.17.35" alt="M4 底部显示最近一次袖带血压，ABP 一栏为空" caption="先确认你看的是实时动脉压还是上一次袖带读数。新的袖带循环完成后，NIBP 才更新。" />
+
+## 指尖血糖
+
+低血糖指血液里的葡萄糖低于合适的水平。对很多糖尿病患者，常见的低血糖界线是 **低于 70 mg/dL（约 3.9 mmol/L）**。游戏用 **mmol/L**。看到 **2.6** 这类低值，再结合出汗、发抖、虚弱或意识不清的表现。看到 **5.2** 时，通常要继续找其他原因。[美国国立糖尿病、消化及肾脏疾病研究所低血糖介绍](https://www.niddk.nih.gov/health-information/diabetes/overview/preventing-problems/low-blood-glucose-hypoglycemia)
+
+在可用的手上选**测血糖**，有条件时也能从**检查**里做。游戏里的补糖会逐步起效。补糖后，隔一会儿再测一次，并做**全身检查**。如果血糖上来了，但一侧握力或说话仍有异常，继续查这些症状。缺设备时，部分病例会显示**无法测血糖，转诊**。
+
+<WikiShot name="glucose-fingertip" version="0.17.40" alt="手部操作栏有测血糖，完成后游戏提示读数已记入病例" caption="血糖是单次测量。读数记进病例后，想知道现在是多少，要再测一次。" />
+
+[监护仪读数总览](../) · [血压设备](../../../reference/items/blood-pressure/) · [血糖采样器](../../../reference/items/glucose-sampler/)
