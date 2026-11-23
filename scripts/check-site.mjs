@@ -68,6 +68,9 @@ for (const lang of ['', 'zh-cn/']) {
     const url = new URL(lang + route, base);
     const rendered = readFileSync(pathFor(url), 'utf8');
     assert.match(rendered, lang ? /<html[^>]+lang="zh-CN"/i : /<html[^>]+lang="en"/i, `Page language ${url}`);
+    const visibleText = rendered.replace(/<(script|style|pre|code)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
+      .replace(/<[^>]+>/g, ' ');
+    assert.doesNotMatch(visibleText, /\*\*/, `Visible Markdown bold marker on ${url}`);
     assert.doesNotMatch(rendered, spoilers, `Campaign text in ${url}`);
     const details = [...rendered.matchAll(diagnosisDetails)];
     if (route === 'reference/conditions/recovery-specialist/') {
