@@ -21,7 +21,7 @@ The dev and preview servers serve under `/probably-stolen-doctor-wiki/`. The pro
 
 - Put English pages in `src/content/docs/` and their Simplified Chinese counterparts at the same relative path under `src/content/docs/zh-cn/`.
 - Match player-visible terms to the game locale. Use relative links between pages so the repository path and current language stay intact.
-- Keep readiness gates and visual guides public. Place campaign-only item names in the collapsed, search-excluded item index. Keep plot triggers, outcomes, and campaign patients out of the guides.
+- Document readiness checks and controls. Describe campaign-only items by type and use. A standalone specialist diagnosis name may appear in the collapsed, search-excluded condition reference. Keep named cases, plot triggers, and campaign outcomes out of pages, screenshot crops, and search.
 - The header art uses the Doctor mod’s original monitor sprite and room illustration. Interface diagrams are original teaching illustrations. Screenshots are game frames cropped to the relevant controls, with the capture build given in each caption.
 
 The Pages workflow builds and serves `main`. The site uses [Starlight](https://starlight.astro.build/) on [Astro](https://docs.astro.build/en/guides/deploy/github/).

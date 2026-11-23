@@ -26,7 +26,9 @@ function pathFor(url) {
   return new URL(`${path.replace(/\/$/, '')}${path ? '/' : ''}index.html`, dist);
 }
 
-const spoilers = /CHASE IT DOWN|Sentinel Collapse|Silva|S-17|Serpico|Eleanor|席尔瓦|希尔瓦|哨兵崩溃|哨兵病|赛尔皮科|埃莉诺/i;
+const spoilers = /CHASE IT DOWN|Silva|S-17|Serpico|Eleanor|Luo Ming|The Freight Worker and His Sister|One Name Missing|One Ride Approved|席尔瓦|希尔瓦|赛尔皮科|埃莉诺|罗明/i;
+const diagnosisName = /Sentinel Collapse|哨兵崩溃|哨兵病/i;
+const diagnosisDetails = /<details\b(?=[^>]*\bid="specialist-diagnosis-name")(?=[^>]*\bdata-pagefind-ignore\b)[^>]*>[\s\S]*?<\/details>/g;
 const notices = [
   ['LICENSE.txt', 'LICENSE'],
   ['LICENSE-CC-BY-SA-4.0.txt', 'LICENSE-CC-BY-SA-4.0.txt'],
@@ -66,10 +68,15 @@ for (const lang of ['', 'zh-cn/']) {
     const url = new URL(lang + route, base);
     const rendered = readFileSync(pathFor(url), 'utf8');
     assert.match(rendered, lang ? /<html[^>]+lang="zh-CN"/i : /<html[^>]+lang="en"/i, `Page language ${url}`);
-    const searchable = route.startsWith('reference/')
-      ? rendered.replace(/<details\b[^>]*\bdata-pagefind-ignore\b[^>]*>[\s\S]*?<\/details>/g, '')
-      : rendered;
-    assert.doesNotMatch(searchable, spoilers, `Campaign text in ${url}`);
+    assert.doesNotMatch(rendered, spoilers, `Campaign text in ${url}`);
+    const details = [...rendered.matchAll(diagnosisDetails)];
+    if (route === 'reference/conditions/recovery-specialist/') {
+      assert.equal(details.length, 1, `Missing opt-in specialist diagnosis on ${url}`);
+      assert.match(details[0][0], lang ? /<p>哨兵病<\/p>/ : /<p>Sentinel Collapse<\/p>/, `Diagnosis name differs on ${url}`);
+    } else {
+      assert.equal(details.length, 0, `Unexpected specialist diagnosis section on ${url}`);
+    }
+    assert.doesNotMatch(rendered.replace(diagnosisDetails, ''), diagnosisName, `Diagnosis revealed on ${url}`);
     const alternate = new URL((lang ? '' : 'zh-cn/') + route, base).pathname;
     assert(rendered.includes(`<option value="${alternate}"`), `Missing language switch target on ${url}`);
   }
