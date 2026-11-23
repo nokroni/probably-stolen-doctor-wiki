@@ -27,6 +27,17 @@ function pathFor(url) {
 }
 
 const spoilers = /CHASE IT DOWN|Sentinel Collapse|Silva|S-17|Serpico|Eleanor|席尔瓦|希尔瓦|哨兵崩溃|哨兵病|赛尔皮科|埃莉诺/i;
+const notices = [
+  ['LICENSE.txt', 'LICENSE'],
+  ['LICENSE-CC-BY-SA-4.0.txt', 'LICENSE-CC-BY-SA-4.0.txt'],
+  ['ASSET-NOTICES.txt', 'ASSET-NOTICES.md'],
+  ['THIRD-PARTY-NOTICES.txt', 'public/THIRD-PARTY-NOTICES.txt'],
+];
+for (const [published, source] of notices) {
+  assert.deepEqual(readFileSync(new URL(published, dist)), readFileSync(new URL(`../${source}`, import.meta.url)),
+    `Published notice differs from ${source}`);
+}
+
 const itemPages = itemCategories.flatMap(({ items }) => items);
 assert.equal(new Set(itemPages).size, itemPages.length, 'An item family belongs to only one category');
 assert.deepEqual(pages.filter((route) => /^reference\/items\/[^/]+\/$/.test(route)).sort(),
@@ -34,6 +45,13 @@ assert.deepEqual(pages.filter((route) => /^reference\/items\/[^/]+\/$/.test(rout
   'Every item page belongs to the item catalog');
 
 for (const lang of ['', 'zh-cn/']) {
+  const licensing = new URL(`${lang}licensing/`, base);
+  const licensingHtml = readFileSync(pathFor(licensing), 'utf8');
+  const noticePrefix = lang ? '../../' : '../';
+  for (const [published] of notices) {
+    assert(licensingHtml.includes(`href="${noticePrefix}${published}"`), `${licensing} must link to ${published}`);
+  }
+
   const index = new URL(`${lang}reference/items/`, base);
   const indexHtml = readFileSync(pathFor(index), 'utf8');
   for (const { slug, items } of itemCategories) {
@@ -83,4 +101,4 @@ for (const file of snapshots) {
   const name = /([^\\/]+)\.webp$/.exec(file)?.[1];
   assert(name && citedCaptures.has(name), `Unused screenshot: ${file}`);
 }
-console.log(`Verified ${pages.length * 2} bilingual pages, ${itemPages.length} item families per language, ${snapshots.length} game captures, same-site links, search output and spoiler scan.`);
+console.log(`Verified ${pages.length * 2} bilingual pages, ${itemPages.length} item families per language, ${snapshots.length} game captures, published notices, same-site links, search output and spoiler scan.`);
