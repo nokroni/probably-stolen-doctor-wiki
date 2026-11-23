@@ -25,3 +25,9 @@ The dev and preview servers serve under `/probably-stolen-doctor-wiki/`. The pro
 - The header art uses the Doctor mod’s original monitor sprite and room illustration. Interface diagrams are original teaching illustrations. Screenshots are game frames cropped to the relevant controls, with the capture build given in each caption.
 
 The Pages workflow builds and serves `main`. The site uses [Starlight](https://starlight.astro.build/) on [Astro](https://docs.astro.build/en/guides/deploy/github/).
+
+## Licensing
+
+- Original site code uses the [MIT License](LICENSE).
+- Original English and Simplified Chinese guides, references, and teaching illustrations use [CC BY-SA 4.0](LICENSE-CC-BY-SA-4.0.txt).
+- Game captures, Doctor mod artwork, trademarks, and third-party material follow the [asset exceptions](ASSET-NOTICES.md). The wiki displays the policy in [English](https://nokroni.github.io/probably-stolen-doctor-wiki/licensing/) and [简体中文](https://nokroni.github.io/probably-stolen-doctor-wiki/zh-cn/licensing/).

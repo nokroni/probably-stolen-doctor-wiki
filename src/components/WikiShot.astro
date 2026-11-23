@@ -12,13 +12,19 @@ const { name, alt, version, caption } = Astro.props;
 const images = import.meta.glob<ImageMetadata>('../assets/captures/*.webp', { eager: true, import: 'default' });
 const photo = images[`../assets/captures/${name}.webp`];
 if (!photo) throw new Error(`Unknown wiki capture: ${name}`);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const isChinese = Astro.url.pathname.startsWith(`${base}/zh-cn/`);
+const assetCredits = `${base}${isChinese ? '/zh-cn' : ''}/licensing/`;
 ---
 
 <figure class="wiki-shot">
   <a href={photo.src} aria-label={alt}>
     <img src={photo.src} width={photo.width} height={photo.height} alt={alt} loading="lazy" decoding="async" />
   </a>
-  <figcaption><span>{caption}</span><small>Doctor {version}</small></figcaption>
+  <figcaption>
+    <span>{caption}</span>
+    <small><a href={assetCredits}>{isChinese ? '游戏截图' : 'Game capture'}</a> · Doctor {version}</small>
+  </figcaption>
 </figure>
 
 <style>
@@ -27,7 +33,7 @@ if (!photo) throw new Error(`Unknown wiki capture: ${name}`);
     border: 1px solid var(--sl-color-gray-5);
     background: var(--sl-color-bg-sidebar);
   }
-  .wiki-shot a { display: block; line-height: 0; }
+  .wiki-shot > a { display: block; line-height: 0; }
   .wiki-shot img { display: block; width: 100%; height: auto; max-height: 28rem; object-fit: contain; }
   .wiki-shot figcaption {
     display: flex;
