@@ -21,9 +21,9 @@ A slow resting rate is called **bradycardia**, and a fast one is called **tachyc
 
 In **118/76 mmHg**, **118** is systolic pressure, measured as the heart pumps. **76** is diastolic pressure, between beats. A common adult reference is systolic below **120** and diastolic below **80**. Readings below **90/60 mmHg** are commonly described as low. The patient's symptoms and the direction the pressure is moving matter too. [AHA blood pressure numbers](https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/) · [AHA on low blood pressure](https://www.heart.org/en/health-topics/high-blood-pressure/the-facts-about-high-blood-pressure/low-blood-pressure-when-blood-pressure-is-too-low/)
 
-In the game, **NIBP** remembers the last cuff measurement. **ABP** is live when the arterial line is working. Suppose the cuff showed **118/76** earlier, and now the patient is dizzy and the pulse is weak. Run another cuff cycle or look at current ABP. Falling pressure with an organized ECG can still point to trouble with circulation. Look for other clues such as bleeding or infection. After a rhythm change, recheck the pulse and give pressure time to respond. A reading like **145/92** is high for a resting adult. If you see it in the clinic, compare it with the patient's pain, symptoms, and repeat readings.
+In the game, **NIBP** keeps the last successful cuff measurement and its age. **MEAS** means a new measurement is in progress. **ERR** means the attempt failed. If an older reading is still on-screen, it keeps its original age and may be marked with **?**. **ABP** updates beat by beat when the arterial line is working. If the patient becomes dizzy or the pulse weakens, look at live ABP or take a fresh cuff reading. Check for clues such as bleeding or infection even if the ECG looks organized. After a rhythm change, recheck the pulse and give pressure time to respond. A reading like **145/92** is high for a resting adult. In the clinic, compare it with the patient's pain, symptoms, and repeat readings.
 
-<WikiShot name="m4-live" version="0.17.35" alt="M4 shows the last cuff reading along the bottom while the ABP channel is blank" caption="NIBP is the last cuff result. It updates when a new cycle completes. Live ABP has its own row." />
+<WikiShot name="abp-live" version="0.17.86" alt="M4 monitor with a red ABP waveform and a low arterial pressure of 89 over 57. NIBP shows dashes." caption="The red ABP row is live at 89/57 mmHg. The cuff has no reading in this frame, so NIBP shows dashes." />
 
 ## Fingerstick glucose
 
@@ -31,6 +31,6 @@ Low blood glucose, or **hypoglycemia**, means blood sugar has fallen below a hea
 
 On a usable hand, select **Check glucose**. You can also find it under **Diagnostics** with a fitted sampler. Glucose rises gradually after the in-game treatment. Take a fresh reading and run another **Body exam**. If one-sided grip or speech symptoms remain after the glucose comes up, continue investigating them. If the sampler is missing, some visits offer **Refer without glucose test**.
 
-<WikiShot name="glucose-fingertip" version="0.17.40" alt="Hand actions show Check glucose and confirm that the completed reading was recorded" caption="Glucose is a one-off reading. Run the check again to see the current value." />
+<WikiShot name="glucose-reading" version="0.17.40" alt="Hand panel glucose result of 4.3 mmol/L" caption="The hand panel shows a recorded glucose result of 4.3 mmol/L. Run Check glucose again for a fresh measurement." />
 
 [Monitor overview](../) · [Pressure equipment](../../../reference/items/blood-pressure/) · [Glucose sampler](../../../reference/items/glucose-sampler/)
