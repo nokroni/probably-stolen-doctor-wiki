@@ -1,19 +1,32 @@
 ---
 title: "Native equipment modules"
-description: "Use the original module system in compatible top-model clinic devices."
+description: "See what Performance, Efficiency, and Quality do on the M4, manual defibrillator, and station controller."
 ---
 
-The M4, manual defibrillator and station control module accept compatible native universal modules. Open the fitted device's module bay and read the displayed total after placement. Lower models run at their factory settings. Look for **Remove old modules** if a saved lower model still has legacy parts.
+The M4, manual defibrillator, and station control module accept compatible native universal modules. Open the fitted device to see its combined **Performance**, **Efficiency**, and **Quality**. The examples below use those totals. The M2, M3, and portable AED run at their factory settings. Look for **Remove old modules** if an older save still has modules in a lower model.
 
-## Items and sources
+## What each attribute does
 
-| Base-game item | Clinic use |
-| --- | --- |
-| Performance Module, Overclock Module | Native performance effects can speed up device operations. Check the native module's power trade-off. |
-| Efficiency Module, Eco Module | Native efficiency effects change energy draw. A stock manual charge costs selected joules ÷ 50. |
-| Quality Module, Streamlining Module, Refinement Module | Use the module's displayed native modifiers. Higher quality improves the manual defibrillator's chance of converting an eligible rhythm and helps the M4 acquire signals. |
-| Neural Core Module (Capped), Neural Core Module (Uncapped) | Apply their native performance, efficiency and quality modifiers when fitted to a compatible bay. |
-| Ruined Module, Corrupted Module, Node (Small), Node (Medium) | The native module bay handles fitting and any effects. Check shape, tags and the native tooltip before buying. |
+| Device | Performance | Efficiency | Quality |
+| --- | --- | --- | --- |
+| [M4 critical care monitor](../monitors/) | Shortens each manual or automatic cuff measurement. At +50%, it takes 4 seconds instead of 6. | Adjusts the draw per cuff cycle and per accumulated minute of active monitoring. Each has a base cost of 1 unit. | Shortens the wait for pleth, pulse rate, and SpO₂ after the finger probe has good contact and detects a usable pulse. At +50%, the wait drops from 3 seconds to 2. |
+| [Manual defibrillator](../defibrillators/) | Shortens charging at the same energy setting. At 200 J and +50%, charging drops from 3.2 seconds to about 2.1. | Adjusts the draw when charging starts. At 200 J and +25%, charging costs 3 units instead of 4. | Raises the chance of converting an eligible rhythm with a synchronized or unsynchronized shock. +50% multiplies the chance by 1.5, subject to the game's probability limits. |
+| [Station control module](../station-controller/) | No implemented effect. | Adjusts the draw each time you use **Archive**. At +25%, an archive costs 0.75 units instead of 1. | No implemented effect. |
+
+The M4 attempts its next automatic cuff measurement about 20 seconds after a cycle starts successfully. Performance shortens the measurement itself. Quality also shortens the wait when the finger probe gets a usable signal again. ECG, ABP, EtCO₂, and temperature use their usual acquisition rules.
+
+The manual defibrillator stores the selected joules when it charges. Performance and Efficiency affect charging time and battery draw independently. Delivery uses the stored charge. Selected energy, rhythm, and the patient's cardiac reserve also affect conversion. Recheck pulse and pressure after the rhythm converts.
+
+Energy Cells can spend fractional units. With the Medical power hub, each device uses its own Efficiency total. A Current Converter rounds the adjusted draw up to a whole unit before applying the base-game power rate. For example, reducing the station's archive cost from 1 to 0.75 saves 0.25 units on a cell. The converter still bills 1 unit. Negative Efficiency increases draw.
+
+## Choosing modules
+
+Performance, Efficiency, and Quality Modules apply the corresponding totals shown in the bay. For Overclock, Eco, Streamlining, Refinement, and the Capped and Uncapped Neural Cores, check which totals change after fitting. For example, if an Overclock raises Performance and lowers Efficiency, the manual defibrillator charges faster and draws more power per charge. For Ruined Modules, Corrupted Modules, and small and medium Nodes, use the base-game panel to check fit and stat changes.
+
+## Unimplemented station effects
+
+- **Station Performance** has no effect on operation time or archive speed.
+- **Station Quality** has no effect on reading precision, archive capacity, or comparisons.
 
 ## Related pages
 
