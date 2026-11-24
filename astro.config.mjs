@@ -58,7 +58,7 @@ export default defineConfig({
         family('Bedside actions', '床旁操作分类', 'procedures', ['assessment', 'monitoring', 'resuscitation', 'medicines', 'wound-care', 'transfer', 'ending-a-visit']),
         family('Find by symptom', '按症状查找', 'conditions', ['symptoms', 'symptoms/heart-breathing', 'symptoms/general-neurologic', 'symptoms/injury-exposure', 'symptoms/monitor-signals']),
         family('Find by condition', '按病症查找', 'conditions', ['chest-pain', 'rhythms', 'breathing', 'infection', 'neurologic', 'abdominal', 'metabolic-exposure', 'wounds', 'major-trauma', 'recovery-specialist']),
-        family('Clinic systems', '诊所系统分类', 'systems', ['progression', 'medical-stock', 'referrals', 'clinic-workflow', 'clinic-economy', 'case-review', 'production']),
+        family('Clinic systems', '诊所系统分类', 'systems', ['progression', 'medical-stock', 'referrals', 'clinic-workflow', 'clinic-economy', 'case-review', 'production', 'chemistry-quality']),
         { slug: 'licensing' },
       ],
     }),

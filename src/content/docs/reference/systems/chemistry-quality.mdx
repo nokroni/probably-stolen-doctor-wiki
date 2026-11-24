@@ -1,0 +1,63 @@
+---
+title: "Crafting temperatures and medicine purity"
+description: "Check reaction temperatures, improve medicine purity, and read the clinic's assay."
+---
+
+## When to take the cylinder off the heat
+
+Set the Heating Plate to **Low**. The base game’s default Low target is **99 °C**. Watch the cylinder’s actual temperature and contents and remove it as soon as the expected ingredient appears. Moonmoss, Pulsevine, and Sugarpod have minimum reaction temperatures. Once the sap has reacted, more heat will not create more of the refined ingredient.
+
+| Recipe | Actual temperature | What to check before finishing |
+| --- | --- | --- |
+| [BroadGuard](../../items/broadguard/#crafting-recipe) | At least **45 °C** | With acidic solution added, look for **Activated Moonmoss**. A refined batch also shows **Refined Moonmoss**. |
+| [PulseLift](../../items/pulselift/#crafting-recipe) | At least **55 °C** | With basic solution added, look for **Activated Pulsevine**. A refined batch also shows **Refined Pulsevine**. |
+| [GlucoRescue](../../items/glucorescue/#crafting-recipe) | At least **65 °C** | Once **Clarified Sugarpod** forms, filter out the debris through Kotton Fabric. Finish the filtrate in the receiving pitcher. |
+| [ClearFlow](../../items/clearflow/#crafting-recipe) | A standard batch goes straight to the Evaporator. A stabilized batch reacts from **40 °C** up to **below 65 °C**. | Take a stabilized batch off the heat when **Stabilized kelp salts** appear. For either route, run the Evaporator until the original cylinder no longer lists Water. |
+
+If your plate has a custom temperature setting, use a target near **40 °C** for stabilized ClearFlow so you have time to check that the salts formed.
+
+## How to raise purity
+
+| Factor | What to do |
+| --- | --- |
+| **Refining reagent** | Measure **2 mL** per batch and add it before heating. Use **Sterile Clarifier** for Moonmoss or Sugarpod and **Pulse Stabilizer** for Pulsevine or stabilized ClearFlow. The refined Moonmoss, Pulsevine, and Sugarpod fractions contribute to potency and offset a limited amount of water and finisher grit. Adding reagent late or using too much can leave it unbound. |
+| **Leftover acid or base** | Use **1 mL** of the matching base-game solution for a single-harvest Moonmoss or Pulsevine batch. Excess acid or base lowers purity and can fail the assay. The correct refining reagent can bind some of the surplus during the reaction. |
+| **Frostkelp-to-Sugarpod ratio** | Start with one of each crop and compare their sap volumes with the Ingredient Spectrometer. ClearFlow potency comes from matched quantities of the two saps and from the salts they form. Extra sap from one crop can make more packs at a lower purity. |
+| **Water, debris, and contamination** | Use a clean vessel for each batch. Heat Sugarpod before filtering, and replace the fabric if the filtrate still contains debris. Finish ClearFlow from the fully dry residue in the original cylinder. In other recipes, residual water dilutes the batch, and unrelated ingredients can cause the bench to reject it. |
+| **Machine modules** | Chemical Equipment Modules in the Blender reduce lost material. If you want less grit in the output, upgrade the Chem Finisher. Keep measuring your reagents and checking the cylinder’s actual temperature with upgraded machines. |
+
+### What machine modules change
+
+| Modules fitted | 0 | 1 | 2 | 3 | 4 or more |
+| --- | --- | --- | --- | --- | --- |
+| Material lost in the Blender | 35% | 20% | 10% | 5% | 0% |
+| Output replaced by grit in the Chem Finisher | 12% | 6% | 3% | 1% | 0% |
+
+A better Blender retains more sap from the same harvest, so a fixed amount of reagent can make up a different share of the mixture. A better Chem Finisher adds less grit. Any impurities already in the feed still need to be dealt with before finishing. [Base-game Blender](https://wiki.biligame.com/probablystolen/%E6%90%85%E6%8B%8C%E6%9C%BA) · [Base-game Chem Finisher](https://wiki.biligame.com/probablystolen/%E5%8C%96%E5%AD%A6%E5%88%B6%E5%89%82%E6%88%90%E5%9E%8B%E6%9C%BA)
+
+### Example batches
+
+These crafting test results used a stock Blender and Chem Finisher and the single-batch quantities on each recipe page. Check your own batch for actual yield and purity.
+
+| Pack | Base recipe | Refined or stabilized with the matching clinic reagent |
+| --- | --- | --- |
+| BroadGuard | 4 packs at 64% | 6 packs at 99% |
+| PulseLift | 4 packs at 64% | 6 packs at 99% |
+| GlucoRescue | 2 packs at 67% | 4 packs at 99% |
+| ClearFlow | 4 packs at 88% | 6 packs at 99% |
+
+Using two Frostkelp strips and one Sugarpod kernel without stabilizer made **6 packs**, but their purity fell to **58%** in the test.
+
+## Which number to read
+
+1. **The Ingredient Spectrometer** helps explain a failed assay. A **2 mL** wet extract needs at least **55%** matching activated or clarified ingredients plus any refined fraction. Where acid or base is used, the residue may be at most **15%**. ClearFlow needs a dry extract with at least **25%** of each effective crop fraction and **75%** combined. The stabilized salts count toward both fractions. At least **98%** of any extract must consist of ingredients the clinic assay recognizes.
+2. **The extract’s sealing message** gives the clinic purity. The finisher’s native purity field counts only the ingredient named by its recipe, so it can read low on a refined batch. Standard packs keep the clinic value, capped at **99%** for crafted extracts. Pressor Bridge, Rhythm Buffer, and Epinephrine take the lower purity of their two extracts. Crafted Heparin inherits its purity from the ClearFlow pack, while high-purity PulseLift qualifies as its other input.
+3. **The bedside confirmation** gives both the pack’s purity and the current response chance. The table shows the base chance for a first indicated dose. After a failed dose, recheck the patient and read the updated chance before using the same medicine on that chart again.
+
+| Pack purity | 50% | 60% | 70% | 80% | 90% | 99% |
+| --- | --- | --- | --- | --- | --- | --- |
+| First-dose response chance | 10% | 25% | 50% | 75% | 90% | 100% |
+
+For example, if a **70%** pack fails and the same medicine is still indicated after reassessment, another **70%** pack for that patient has a **100%** chance of response.
+
+[Recipe index](../production/) · [Native chemistry tools and game screenshots](../../items/chemistry-tools/) · [Sterile finishing bench](../../items/sterile-bench/)
