@@ -13,8 +13,8 @@ Unlock both Farmer and Chemist for clinic extract recipes to appear in the Chem 
 | --- | --- |
 | Ingredient Spectrometer | Check the amount of sap, refined ingredients, and impurities. Use it to verify the required fraction in a compound extract. |
 | Blender, 25ml Graduated Cylinder, 50ml Graduated Cylinder and 100ml Graduated Cylinder | Turn produce into a measured mixture. The cylinder tooltip lists its contents, including leftover water. |
-| Heating Plate and Chemical Equipment Module | Heat crop mixtures. The recipes use Low. With a module installed, check the actual vessel temperature. |
-| Evaporator | Separates the dry residue into its original container and collects liquid in the distillate container. |
+| Heating Plate and Chemical Equipment Module | Heat crop mixtures. Start on Low and check the vessel’s actual temperature and reaction products. |
+| Evaporator | Leaves the dry residue in its original container. A separate cylinder collects whatever the machine can recover and may stay empty when removing water. |
 | Chem Finisher | Turns prepared mixtures into named extracts. For a dry recipe, inspect the prepared vessel for residual water before finishing. |
 | Water Pitcher and Kotton Fabric | Fit the fabric as a filter and collect the prepared Sugarpod mixture in the pitcher. |
 | 1ml Dropper, Bottle of Acidic Solution, Bottle of Basic Solution and Chemical Supplies (Common) | Measure with an unmodified 1 mL dropper. Open native Chemical Supplies to restock the acidic or basic solution. |
@@ -25,7 +25,7 @@ Unlock both Farmer and Chemist for clinic extract recipes to appear in the Chem 
 1. Fit a clean, empty cylinder in the Blender’s container slot, put the harvest in the input grid, and start the Blender. Inspect the cylinder to see the sap and volume. Use a separate batch for each recipe.
 2. Measure the recipe’s liquids. One full draw with a stock 1 mL Dropper adds 1 mL. Two full draws add 2 mL. For Moonmoss and Pulsevine, measure the solution as it comes from the matching base-game bottle. The [clinic reagents](../clinic-reagents/) for refining or forming salts come from Medical Supplies. Check the vessel’s ingredient list after measuring.
 3. Heat as specified and check for the new ingredient at the actual temperature. Filter Sugarpod after it clarifies. For ClearFlow, use the Evaporator until the Water row disappears from the original cylinder.
-4. Fit the prepared vessel in the Chem Finisher, choose the matching extract under **Configure**, and select **Output**. Every extract uses **2 mL**. The number of extracts depends on how much prepared material is in the vessel.
+4. Fit the prepared vessel in the Chem Finisher and open **Configure**. Scroll past the base-game recipes to the matching clinic extract, click **Select**, and then **Output**. Every extract uses **2 mL**. The number of extracts depends on how much prepared material is in the vessel.
 5. Inspect the extract for **Ready to seal two packs at X% purity**. The native finisher’s purity field measures its named ingredient. The clinic assay includes the refined fraction as well. Use the sealing message and the finished pack’s purity to judge the medicine.
 
 ## Names in the vessel tooltip
@@ -43,7 +43,7 @@ Unlock both Farmer and Chemist for clinic extract recipes to appear in the Chem 
 | --- | --- |
 | Moonmoss or Pulsevine still lists raw sap at the target temperature | Check that the plate is on and that you used the right acid or base bottle. Read the actual vessel temperature. |
 | The GlucoRescue extract asks for filtering | Heat the Sugarpod until it clarifies, then pour it through clean Kotton Fabric. Finish the filtrate in the receiving pitcher. |
-| ClearFlow will not come out of the finisher | Inspect the original feed cylinder. Even a trace of water needs more evaporation. Check the battery and the empty distillate cylinder. |
+| Clicking **Output** makes no ClearFlow extract | Check the original cylinder in **Container** for Water even if **Output** is available. If water remains, check the Evaporator’s battery, fit an empty cylinder in **Distillate**, and run it again. The distillate cylinder can stay empty even after the feed has dried. |
 | The extract reports unbound reagent | Check the bottle and measure 2 mL for the refinement step. If you added it after the heat reaction finished, start a fresh batch. |
 | The finisher made an extract but the assay failed | Check for contamination, leftover acid or base, and the correct preparation steps. For ClearFlow, also check the ratio of the two crops. |
 
@@ -57,4 +57,4 @@ Unlock both Farmer and Chemist for clinic extract recipes to appear in the Chem 
 
 ## In the game
 
-<WikiShot name="heating-plate" version="0.17.40" alt="Heating Plate with a fitted vessel at 107 °C and a target of 160 °C" caption="The screenshot uses High to show where the current and target temperatures appear. Use Low for these recipes and inspect the vessel’s contents once it reaches the recipe temperature." />
+<WikiShot name="heating-plate" version="0.17.40" alt="Heating Plate with a fitted vessel at 107 °C and a target of 160 °C" caption="The screenshot uses High to show where the current and target temperatures appear. Start on Low and inspect the vessel’s contents once it reaches the recipe temperature." />

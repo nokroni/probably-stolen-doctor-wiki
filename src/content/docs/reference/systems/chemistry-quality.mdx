@@ -5,7 +5,7 @@ description: "Check reaction temperatures, improve medicine purity, and read the
 
 ## When to take the cylinder off the heat
 
-Set the Heating Plate to **Low**. The base game’s default Low target is **99 °C**. Watch the cylinder’s actual temperature and contents and remove it as soon as the expected ingredient appears. Moonmoss, Pulsevine, and Sugarpod have minimum reaction temperatures. Once the sap has reacted, more heat will not create more of the refined ingredient.
+Start with the Heating Plate on **Low**. The base game’s default Low target is **99 °C**. Watch the cylinder’s actual temperature and contents and remove it as soon as the expected ingredient appears. Moonmoss, Pulsevine, and Sugarpod have minimum reaction temperatures. Once the sap has reacted, more heat will not create more of the refined ingredient. If Sugarpod sits below 65 °C on Low, switch to High and remove it once Clarified Sugarpod appears.
 
 | Recipe | Actual temperature | What to check before finishing |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ Set the Heating Plate to **Low**. The base game’s default Low target is **99 �
 | [GlucoRescue](../../items/glucorescue/#crafting-recipe) | At least **65 °C** | Once **Clarified Sugarpod** forms, filter out the debris through Kotton Fabric. Finish the filtrate in the receiving pitcher. |
 | [ClearFlow](../../items/clearflow/#crafting-recipe) | A standard batch goes straight to the Evaporator. A stabilized batch reacts from **40 °C** up to **below 65 °C**. | Take a stabilized batch off the heat when **Stabilized kelp salts** appear. For either route, run the Evaporator until the original cylinder no longer lists Water. |
 
-If your plate has a custom temperature setting, use a target near **40 °C** for stabilized ClearFlow so you have time to check that the salts formed.
+If your plate has a custom temperature setting, use a target near **40 °C** for stabilized ClearFlow so you have time to check that the salts formed. The cylinder in **Distillate** may stay empty when the Evaporator removes water. Check the contents of the original cylinder in **Container** to see whether it is dry.
 
 ## How to raise purity
 
@@ -37,7 +37,7 @@ A better Blender retains more sap from the same harvest, so a fixed amount of re
 
 ### Example batches
 
-These crafting test results used a stock Blender and Chem Finisher and the single-batch quantities on each recipe page. Check your own batch for actual yield and purity.
+These results come from live **0.17.109** crafting with a stock Blender and Chem Finisher and the single-batch quantities on each recipe page. The pack counts assume two packs per accepted extract. Some extracts were set aside for compounds. Check your own batch for actual yield and purity.
 
 | Pack | Base recipe | Refined or stabilized with the matching clinic reagent |
 | --- | --- | --- |
@@ -46,7 +46,9 @@ These crafting test results used a stock Blender and Chem Finisher and the singl
 | GlucoRescue | 2 packs at 67% | 4 packs at 99% |
 | ClearFlow | 4 packs at 88% | 6 packs at 99% |
 
-Using two Frostkelp strips and one Sugarpod kernel without stabilizer made **6 packs**, but their purity fell to **58%** in the test.
+Using two Frostkelp strips and one Sugarpod kernel without stabilizer yielded **3 sealable extracts at 58%** in the live test, enough for **6 packs**.
+
+The **99%** refined and stabilized extracts produced Pressor Bridge, Rhythm Buffer, and Epinephrine at **99%**. An **88% ClearFlow** pack and a **99% PulseLift** pack produced [Heparin](../../items/heparin/) at **88%**. One piece of Kotton Fabric in the disposable save was missing its native durability data and caused a filtering error. After restoring that data for the test, both Sugarpod batches filtered successfully.
 
 ## Which number to read
 
