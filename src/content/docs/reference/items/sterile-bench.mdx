@@ -5,9 +5,21 @@ description: "Seal prepared extracts, make sterile supplies, and verify a compou
 
 import WikiShot from '../../../../components/WikiShot.astro';
 
-Open the bench and choose **Choose recipe**. Put the exact listed items into the material slots. An extract comes from the native Chem Finisher. Crafting checks its preparation and assay. For standard packs, one eligible extract makes two sealed packs and carries forward its assay. For a compound, fit both refined extracts, a full carrier bottle and any named seal. The finished compound takes the lower of the two clinic purity readings and displays the input lots on its tooltip.
+The bench handles the last step of production. Prepare extracts first in the [Chem Finisher](../chemistry-tools/). The [production index](../../systems/production/) lists each recipe’s ingredients, grade, and output.
 
-You need both the Farmer and Chemist routes to seal extracts or craft specialty packs and sterile cartridges. Recipes can also require a clinic grade. If **Craft** stays disabled, check the recipe's ingredients and requirements. Move finished stock to shop storage so it can be used at the bed.
+## Choose a recipe and load the inputs
+
+1. Open the bench and select **Choose recipe**. Pick the medicine or supply you want to make. Check the recipe list and move the required quantities into the grid on the left.
+2. Inspect the ingredients. A standard pack recipe takes one extract that has passed its clinic assay. A compound takes two separate finished extracts with their specified refined or stabilized ingredients, plus a full **10 mL** bottle of the named reagent. Grade IV compounds also need a sterile cartridge. Save partly used bottles for processing crops.
+3. Select **Craft** once the ingredient list is satisfied. Take the output from the slot on the right and move it to shop stock. Inspect the finished item for its purity before using it at the bed.
+
+A standard recipe makes **2 packs** at the purity shown on the extract’s sealing message. A compound makes **1 pack** at the lower of the two extract purities and shows the input lots in its description.
+
+## If Craft stays disabled
+
+- **The ingredient list shows a shortage.** Move the items from stock into the bench’s left grid. Check the distinction between an extract and a sealed pack when making compounds.
+- **You have enough items but they do not count.** Check that the extract passes its assay. For compounds, check the refined ingredient and the reagent bottle’s contents and volume. PainEase, Clinic Biogel, and Heparin use a sealed pack with a minimum purity.
+- **A recipe is missing or shows an unmet requirement.** The recipes need Farmer and Chemist except for the sterile syringe recipe. Compounds and some specialty supplies also require a clinic grade.
 
 ## Items and sources
 

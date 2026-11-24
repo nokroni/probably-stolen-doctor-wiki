@@ -5,19 +5,28 @@ description: "Find the vessels, filter, heater, evaporator, and finisher used in
 
 import WikiShot from '../../../../components/WikiShot.astro';
 
-Unlock both Farmer and Chemist to access the clinic extract recipes. Use the preparation steps on the extract's own item page. The Chem Finisher uses 2 mL per output. Choose **Configure**, select the recipe, and check the vessel before **Output**. When a dry recipe is required, an apparently hot vessel can still contain water. Wait for the item description to lose its Water row.
+Unlock both Farmer and Chemist for clinic extract recipes to appear in the Chem Finisher. Find each recipe’s measurements and temperatures in the [production index](../../systems/production/). The four extracts use the same machine controls.
 
 ## Items and sources
 
 | Base-game item | Clinic crafting use |
 | --- | --- |
+| Ingredient Spectrometer | Check the amount of sap, refined ingredients, and impurities. Use it to verify the required fraction in a compound extract. |
 | Blender, 25ml Graduated Cylinder, 50ml Graduated Cylinder and 100ml Graduated Cylinder | Turn produce into a measured mixture. The cylinder tooltip lists its contents, including leftover water. |
-| Heating Plate and Chemical Equipment Module | Heat fictional crop mixtures. Native chemical modules change the plate's operating range and performance. |
+| Heating Plate and Chemical Equipment Module | Heat crop mixtures. The recipes use Low. With a module installed, check the actual vessel temperature. |
 | Evaporator | Separates the dry residue into its original container and collects liquid in the distillate container. |
 | Chem Finisher | Turns prepared mixtures into named extracts. For a dry recipe, inspect the prepared vessel for residual water before finishing. |
 | Water Pitcher and Kotton Fabric | Fit the fabric as a filter and collect the prepared Sugarpod mixture in the pitcher. |
-| 1ml Dropper, 5ml Dropper, Bottle of Acidic Solution, Bottle of Basic Solution and Chemical Supplies (Common) | Measure game reagents in the cylinder. Open the native chemical supplies for reagent stock. |
+| 1ml Dropper, Bottle of Acidic Solution, Bottle of Basic Solution and Chemical Supplies (Common) | Measure with an unmodified 1 mL dropper. Open native Chemical Supplies to restock the acidic or basic solution. |
 | Chemistry Manual and Hydroponic Farming Manual | Explain the original machine controls and growing system. |
+
+## From Blender to Chem Finisher
+
+1. Fit a clean, empty cylinder in the Blender’s container slot, put the harvest in the input grid, and start the Blender. Inspect the cylinder to see the sap and volume. Use a separate batch for each recipe.
+2. Measure the recipe’s liquids. One full draw with a stock 1 mL Dropper adds 1 mL. Two full draws add 2 mL. For Moonmoss and Pulsevine, measure the solution as it comes from the matching base-game bottle. The [clinic reagents](../clinic-reagents/) for refining or forming salts come from Medical Supplies. Check the vessel’s ingredient list after measuring.
+3. Heat as specified and check for the new ingredient at the actual temperature. Filter Sugarpod after it clarifies. For ClearFlow, use the Evaporator until the Water row disappears from the original cylinder.
+4. Fit the prepared vessel in the Chem Finisher, choose the matching extract under **Configure**, and select **Output**. Every extract uses **2 mL**. The number of extracts depends on how much prepared material is in the vessel.
+5. Inspect the extract for **Ready to seal two packs at X% purity**. The native finisher’s purity field measures its named ingredient. The clinic assay includes the refined fraction as well. Use the sealing message and the finished pack’s purity to judge the medicine.
 
 ## Names in the vessel tooltip
 
@@ -27,6 +36,16 @@ Unlock both Farmer and Chemist to access the clinic extract recipes. Use the pre
 | Activated Pulsevine, Activated Moonmoss, Clarified Sugarpod | Prepared mixtures for [PulseLift](../pulselift/), [BroadGuard](../broadguard/), and [GlucoRescue](../glucorescue/), respectively. |
 | Refined Pulsevine, Refined Moonmoss, Refined Sugarpod | Fractions produced with the matching clinic reagent. The compound recipes check for these in the finished extracts. |
 | Stabilized kelp salts | A processed Frostkelp and Sugarpod mixture. Finish the dry residue for the [ClearFlow extract](../clearflow/) used in Pressor Bridge. |
+
+## If a batch stalls or fails its assay
+
+| What you see | What to check |
+| --- | --- |
+| Moonmoss or Pulsevine still lists raw sap at the target temperature | Check that the plate is on and that you used the right acid or base bottle. Read the actual vessel temperature. |
+| The GlucoRescue extract asks for filtering | Heat the Sugarpod until it clarifies, then pour it through clean Kotton Fabric. Finish the filtrate in the receiving pitcher. |
+| ClearFlow will not come out of the finisher | Inspect the original feed cylinder. Even a trace of water needs more evaporation. Check the battery and the empty distillate cylinder. |
+| The extract reports unbound reagent | Check the bottle and measure 2 mL for the refinement step. If you added it after the heat reaction finished, start a fresh batch. |
+| The finisher made an extract but the assay failed | Check for contamination, leftover acid or base, and the correct preparation steps. For ClearFlow, also check the ratio of the two crops. |
 
 ## Related pages
 
@@ -38,4 +57,4 @@ Unlock both Farmer and Chemist to access the clinic extract recipes. Use the pre
 
 ## In the game
 
-<WikiShot name="heating-plate" version="0.17.40" alt="Native Heating Plate with a fitted vessel, current temperature, and target temperature" caption="Check the current temperature and the vessel’s actual ingredients. A target temperature or an elapsed timer alone does not show the batch is ready." />
+<WikiShot name="heating-plate" version="0.17.40" alt="Heating Plate with a fitted vessel at 107 °C and a target of 160 °C" caption="The screenshot uses High to show where the current and target temperatures appear. Use Low for these recipes and inspect the vessel’s contents once it reaches the recipe temperature." />
