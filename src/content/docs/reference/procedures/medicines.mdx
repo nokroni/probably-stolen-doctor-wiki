@@ -5,18 +5,18 @@ description: "Find the medicine tray, select a lot, give a dose, and recheck the
 
 import WikiShot from '../../../../components/WikiShot.astro';
 
-Open **Medicines**, an eligible **Syringe tray** at a forearm, or **Instruments → Treatment tray**. Confirm the exact lot, purity, and current price. Use **Pin Quick care action** for quick access to a medicine or dressing. A dose may require a syringe as well as the pack. A failed dose still uses the listed stock and can raise the next attempt’s response chance for that medicine on the same chart. Check the patient and the updated chance before retrying.
+Select the pictured **Medication tray** beside the bed or open **Syringe tray** from an eligible forearm. Confirm the exact lot, purity, and current price. Use **Pin Quick care action** for quick access to a medicine or dressing. A dose may require a syringe as well as the pack. A failed dose still uses the listed stock and can raise the next attempt’s response chance for that medicine on the same chart. Check the patient and the updated chance before retrying.
 
-<WikiShot name="medicines-drawer-en" version="0.17.84" alt="Medicines drawer with forearm tabs and paging buttons beside the full M4 monitor" caption="Medicines opens beside the monitor. Treatment tray is a separate tab under Instruments." />
+<WikiShot name="medicines-drawer-en" version="0.17.84" alt="Earlier Medicines drawer with forearm tabs and paging buttons beside the M4 monitor" caption="Earlier layout. The forearm controls choose where to administer the selected dose." />
 
-For doses that require forearm access, choose **Left forearm** or **Right forearm** at the top of **Medicines**. The body chart stays on the site you were inspecting. Topical medicine still uses the affected site selected on the body chart. If a medicine has multiple lots, click its batch number, such as **Batch 1/2**, to cycle through them. If the button reads **Select batch**, choose the current lot before confirming. Use **More medicines** or **Previous medicines** at the bottom to change pages.
+For doses that require forearm access, choose **Left forearm** or **Right forearm** at the top of **Medicines**. For topical medicine, select the affected area directly on the patient. If a medicine has multiple lots, click its batch number, such as **Batch 1/2**, to cycle through them. If the button reads **Select batch**, choose the current lot before confirming. Use **More medicines** or **Previous medicines** at the bottom to change pages.
 
 <WikiShot name="medicine-confirm-en" version="0.17.41" alt="GlucoRescue confirmation shows the selected forearm, quantity, purity, chance, and Confirm" caption="The full medicine name appears above the forearm controls. Check the side and lot, then select Confirm beside its quantity, purity, and response chance." />
 
 | Action | What the chart checks |
 | --- | --- |
 | BroadGuard, GlucoRescue, and PulseLift | The corresponding infection finding, measured low glucose, or need for circulation support determines eligibility. Watch the response and repeat the relevant assessment before closing care. |
-| ClearFlow infusion for a critical patient | Complete Body exam and obtain a current low blood pressure reading from the cuff or arterial line. Collect a bedside chemistry sample if the chart also asks for electrolytes. Fit and power the pump, select a usable forearm, and choose **ClearFlow infusion** in **Instruments → Treatment tray**. Recheck blood pressure when the infusion ends. |
+| ClearFlow infusion for a critical patient | Complete Body exam and obtain a current low blood pressure reading from the cuff or arterial line. Collect a bedside chemistry sample if the chart also asks for electrolytes. Fit and power the pump, open it from the ward, select a usable forearm, and choose **ClearFlow infusion**. Recheck blood pressure when the infusion ends. |
 | ClearFlow for measured electrolyte imbalance | If the patient only needs electrolyte correction and the chemistry result supports it, select **Electrolyte support** and a lot at a usable forearm. Continue any needed breathing or circulation support while waiting for a response. |
 | Naloxgone | Read the exposure record and confirm the indicated exposure in the chart. When the dose becomes available, check breathing again and continue observation. |
 | Heparin | On eligible charts, find it at the forearm after the required coronary evidence. Confirm the dose before moving on to the chart’s next step. |

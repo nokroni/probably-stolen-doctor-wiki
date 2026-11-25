@@ -5,7 +5,7 @@ description: "对比 AED 和手动除颤器的心律分析、能量选择与放�
 
 import WikiShot from '../../../../../components/WikiShot.astro';
 
-1. 点病人的胸部，打开**贴上胸部电极片**。把两片带编号的电极放进对应轮廓。
+1. 点床边的 AED 或手动除颤器，也可以点病人的胸部再选**贴上胸部电极片**。把每片电极拖进相同编号的轮廓，或先点电极片再点轮廓。每贴好一片，就能看到连向机器的线。
 2. AED 上点**分析心律**，按机器提示走。手动除颤器可以在充电前选择能量档。
 3. 点**充电**，等设备就绪，在病历和机器允许时点**放电**。手动按压挡住操作时，点底部的**停止按压**。在符合条件的电击中，胸外按压机仍可继续工作。
 4. 放电后等心电波形恢复，再分别复查心律和脉搏。
@@ -37,10 +37,12 @@ import WikiShot from '../../../../../components/WikiShot.astro';
 
 ## 游戏画面
 
+<WikiShot name="aed-one-pad-connected" version="1.0.0" alt="第一片电极已贴在胸部并连上 AED，第二片电极和胸部轮廓仍然可见" caption="第一片已接好。把旁边剩下的那片移到标有 2 的轮廓中。" />
+
 <div class="wiki-comparison">
 
-<WikiShot name="aed-panel" version="0.17.40" alt="AED 显示电极片未接，并给出胸部贴片入口" caption="看到 AED 提示电极片未接时，先到胸部贴好两片，再回来分析心律。" />
+<WikiShot name="aed-panel" version="0.17.40" alt="旧版 AED 显示电极片未接，并给出胸部贴片入口" caption="旧版 AED 面板。两片电极都贴好后，下一步点「分析心律」。" />
 
-<WikiShot name="manual-panel" version="0.17.31" alt="手动除颤器接入后显示能量选择、同步、充电与电击控件" caption="手动机多了能量和同步设置。电池图标用来充电，闪电图标在满足条件时用来放电。" />
+<WikiShot name="manual-panel" version="0.17.31" alt="旧版手动除颤器显示能量选择、同步、充电与电击控件" caption="旧版手动机面板。手动机多了能量和同步设置。电池图标用来充电，闪电图标在满足条件时用来放电。" />
 
 </div>
