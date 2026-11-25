@@ -12,19 +12,21 @@ import BedsideGuideDiagram from '../../../components/BedsideGuideDiagram.astro';
 
 ## Assess and act
 
-Use **Body exam** at the bottom when you have time to examine a stable patient. After **2.5 seconds**, the chart updates and **Exam findings** brings the recorded observations together. Select a body part to read its finding and see its available actions. On critical referrals, the site card shows the newest bedside finding first. After treatment, a new exam lets you compare changes.
+Use **Body exam** at the bottom when the patient is stable. After **2.5 seconds**, the body chart updates. Use **Exam findings** to read all the observations, or select a marker on the patient or a site on the left-hand chart to see its finding and available actions. Use the chart’s R and L for the patient's sides. On critical referrals, the site shows the newest finding first. Repeat the exam after treatment to see what changed.
 
 For an urgent problem, use the available action as soon as the bedside supports it. The boxed **Me** thought at lower left suggests what to look at next. It can point out a fresh reading or action the bedside is waiting for.
 
-| Select on the body chart | Actions to look for |
+| Select a site | Actions to look for |
 | --- | --- |
 | Head | Fit the bag and mask or take a temperature. |
-| Chest | Connect ECG leads, start manual CPR, or place both defibrillator pads on their numbered guides. Then open the defibrillator to use its controls. |
+| Chest | Connect ECG leads, start manual CPR, or choose **Attach pads to chest** and drag both defibrillator pads to their outlines. Select the pictured AED or defibrillator by the bed to use its controls. |
 | Hand or forearm | Check a pulse. Select a hand for the finger probe or glucose check. Select a forearm for eligible medicine and IV procedures. |
 | Upper arm | Fit the cuff and take a blood-pressure reading. You can return to another action while the cuff cycles. |
 | Injured site | Read the finding and look for an available wound or joint procedure. The action applies to the selected body part. |
 
 The monitor groups ECG and HR, pleth and SpO₂, and the latest cuff reading (NIBP). Extra channels depend on the fitted equipment and connected probes. An ECG beep confirms electrical activity. Use the wrist check when you need to know whether the patient has a pulse. [Learn to read the waves and numbers](../monitor/).
+
+During the visit, check **Instruments** at the bottom for available diagnostic and support actions. At an empty bed, use **Open equipment rack** to fit devices and check their power.
 
 <Aside title="Space gives one manual compression">
 
@@ -34,11 +36,11 @@ Start CPR at the chest, then tap and release **Space** for each compression. The
 
 ## Reach medicines quickly
 
-Open **Medicines** from the bedside or choose an eligible forearm action. For a dose that needs forearm access, choose the side at the top of the Medicines panel. The body chart stays on the site you were inspecting. Check the name, batch purity, and price before giving it. See [Medicines and treatment stock](../../reference/procedures/medicines/) for the batch and page controls. Use **Pin Quick care action** to put a frequently used action one click closer. A disabled action can point to missing stock, a required device, or a finding that needs a fresh check.
+Open **Medicines** at the bottom or choose an eligible forearm action. For a forearm dose, choose the side at the top of the Medicines panel. The chart stays on the site you were inspecting. Check the medicine name, lot purity, and price before giving it. At the empty bed, use **Pin Quick care action** to put a frequently used action on the **Quick** shortcut. A dose can be unavailable when stock or equipment is missing or a finding needs a fresh check. [Medicines and treatment stock](../../reference/procedures/medicines/)
 
 Opening the medicine tray is free. If you confirm an eligible dose, the pack and any required syringe are used even if the patient doesn't respond. You can treat first and record or revise the working diagnosis later.
 
-<WikiShot name="medicine-confirm-en" version="0.17.41" alt="GlucoRescue confirmation shows the selected forearm, quantity, purity, chance, and Confirm" caption="The full medicine name appears above the forearm controls. Check the side and lot, then select Confirm beside its quantity, purity, and response chance." />
+<WikiShot name="medicine-confirm-en" version="0.17.41" alt="Earlier GlucoRescue confirmation shows forearm, quantity, purity, chance, and Confirm" caption="Earlier medicine window. Check the forearm, lot, quantity, and response chance before selecting Confirm." />
 
 ## Finish the visit
 
@@ -47,6 +49,8 @@ Opening the medicine tray is free. If you confirm an eligible dose, the pack and
 | The patient can recover at home | Treat the problem, complete the observation, and record a working diagnosis. Choose **Discharge patient** when it turns green. Stable minor injuries generally won't require a cuff or pulse check. |
 | The patient needs care beyond the shop | Choose **Call Medbay** when the case offers transfer. Keep treating and reassessing while the crew is en route. Complete the current case’s checks and use **Hand over to Medbay** when the crew and patient are ready. |
 | Dispatch has to be treated on site | Follow the intake instructions and continue bedside care. When a new symptom or deterioration interrupts observation, stabilize the patient again before counting a new observation period. |
+
+Find the finish button under the monitor. If it is dimmed, read the current reason or observation timer beside it. Check whether the chart still needs a diagnosis, a fresh reading, or an arriving crew.
 
 You need a fitted sampler to book a visit that calls for a glucose check. If you remove it after booking, some patients can still be admitted with the rest of the required equipment and supplies in place. Do the **Body exam**, ask what the patient or witness saw, then select a hand on the body diagram. If you see **Refer without glucose test**, use it to call the Medbay crew. Record a working diagnosis based on what you found. If the cause is still unclear and the chart offers **Cause still unclear**, use that option. Finish the remaining checks and hand over once the patient is stable and the crew has arrived.
 
@@ -61,4 +65,4 @@ After closing the visit, **Case review** lets you compare findings, intervention
 
 ## In the game
 
-<WikiShot name="bedside-map" version="0.17.40" alt="Bedside body chart with R on the left and L on the right" caption="Use R and L on the diagram. The patient’s right is on the left side of your screen." />
+<WikiShot name="bedside-map" version="0.17.40" alt="Earlier bedside body chart with R on the left and L on the right" caption="Earlier bedside layout. On the body chart, R is the patient's right and L is the patient's left." />

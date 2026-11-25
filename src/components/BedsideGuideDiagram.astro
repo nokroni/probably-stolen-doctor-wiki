@@ -5,25 +5,29 @@ interface Props {
 
 const { language = 'en' } = Astro.props;
 const copy = language === 'zh-CN' ? {
-  title: '床旁界面示意',
+  title: '1.0.0 床旁界面示意',
   body: '人体图',
-  sides: '屏幕左侧是病人的右侧',
+  sides: 'R 是病人的右侧，L 是左侧',
+  patient: '病人',
+  patientDetail: '点身上的标记查看部位',
   monitor: '监护仪',
-  monitorDetail: '观察波形，确认读数是否更新',
+  monitorDetail: '下方显示结案条件',
   hint: '我',
-  hintDetail: '不知道先做什么时，看左下角',
+  hintDetail: '拿不准下一步时看这里',
   actions: '底部操作栏',
-  actionsDetail: '全身检查 · 药品 · 停止操作',
+  actionsDetail: '全身检查 · 药品 · 床旁仪器 · 停止操作',
 } : {
-  title: 'Bedside layout at a glance',
+  title: '1.0.0 bedside diagram',
   body: 'Body chart',
-  sides: 'The patient’s right is on your left',
+  sides: 'R and L mark the patient’s sides',
+  patient: 'Patient',
+  patientDetail: 'Select a marker to inspect the site',
   monitor: 'Monitor',
-  monitorDetail: 'Watch the waveforms and check when readings update',
+  monitorDetail: 'Finish conditions appear below',
   hint: 'Me',
-  hintDetail: 'Look to the lower left for your next step',
+  hintDetail: 'Look here when you get stuck',
   actions: 'Bottom controls',
-  actionsDetail: 'Body exam · Medicines · Stop controls',
+  actionsDetail: 'Body exam · Medicines · Instruments · Stop controls',
 };
 ---
 
@@ -37,6 +41,13 @@ const copy = language === 'zh-CN' ? {
       </div>
       <strong>{copy.body}</strong>
       <span>{copy.sides}</span>
+    </div>
+    <div class="patient tile">
+      <div class="cot" aria-hidden="true">
+        <i></i><i></i><i></i>
+      </div>
+      <strong>{copy.patient}</strong>
+      <span>{copy.patientDetail}</span>
     </div>
     <div class="monitor tile">
       <div class="monitor-label" aria-hidden="true"><span>ECG</span><span>SpO₂</span><span>NIBP</span></div>
@@ -66,7 +77,8 @@ const copy = language === 'zh-CN' ? {
 
   .layout {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr) minmax(0, 1.25fr);
+    grid-template-areas: "chart patient monitor" "hint actions actions";
     gap: .45rem;
   }
 
@@ -75,6 +87,7 @@ const copy = language === 'zh-CN' ? {
     align-content: center;
     justify-items: start;
     min-width: 0;
+    margin-block: 0;
     padding: .7rem;
     border: 1px solid var(--sl-color-gray-5);
     border-radius: .4rem;
@@ -89,8 +102,32 @@ const copy = language === 'zh-CN' ? {
     font-size: 1rem;
   }
 
-  .body, .monitor { min-height: 9rem; }
-  .hint { border-color: var(--sl-color-text-accent); }
+  .body { grid-area: chart; }
+  .patient { grid-area: patient; }
+  .monitor { grid-area: monitor; }
+  .hint { grid-area: hint; border-color: var(--sl-color-text-accent); }
+  .actions { grid-area: actions; }
+  .body, .patient, .monitor { min-height: 9rem; }
+
+  .cot {
+    display: flex;
+    align-items: center;
+    gap: .14rem;
+    width: 100%;
+    max-width: 10rem;
+    height: 2.6rem;
+    box-sizing: border-box;
+    padding: .4rem .6rem;
+    margin-block-end: .55rem;
+    border: 2px solid #838577;
+    border-block-end: 4px solid #6a776e;
+    background: #c6c6a7;
+  }
+
+  .cot i { display: block; height: .85rem; margin: 0; background: #455958; border: 1px solid #3a4a4d; }
+  .cot i:first-child { flex: 0 1 1rem; height: 1rem; border-radius: 40%; background: #a17c63; }
+  .cot i:nth-child(2) { flex: 0 1 4rem; border-radius: .4rem .18rem .2rem .4rem; }
+  .cot i:nth-child(3) { flex: 0 1 3rem; height: .66rem; }
 
   .monitor-label {
     display: flex;
@@ -124,5 +161,10 @@ const copy = language === 'zh-CN' ? {
   @media (max-width: 26rem) {
     .clinic-diagram { padding: .7rem; }
     .tile { padding: .55rem; }
+    .layout {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas: "patient patient" "chart monitor" "hint hint" "actions actions";
+    }
+    .patient { min-height: 0; }
   }
 </style>
