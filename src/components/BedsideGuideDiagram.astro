@@ -6,24 +6,24 @@ interface Props {
 const { language = 'en' } = Astro.props;
 const copy = language === 'zh-CN' ? {
   title: '1.0.0 床旁界面示意',
-  chart: '病例',
-  chartDetail: '点床边夹板，查看病史和记录',
+  chart: '夹板与药盘',
+  chartDetail: '点夹板翻病例，点药盘选药',
   patient: '病人',
-  patientDetail: '直接点身上的部位',
-  monitor: '监护仪',
-  monitorDetail: '接好探头后查看波形和读数',
+  patientDetail: '点病人身上的轮廓，床边会显示可做的操作',
+  monitor: '监护仪与设备',
+  monitorDetail: '看读数，或直接点床边的设备',
   hint: '我',
   hintDetail: '拿不准下一步时看这里',
   actions: '底部操作栏',
   actionsDetail: '全身检查 · 停止操作 · 结案与剩余条件',
 } : {
   title: '1.0.0 bedside diagram',
-  chart: 'Patient chart',
-  chartDetail: 'Select the clipboard for history and records',
+  chart: 'Clipboard and tray',
+  chartDetail: 'Open the chart or choose a medicine',
   patient: 'Patient',
-  patientDetail: 'Select a site directly on the patient',
-  monitor: 'Monitor',
-  monitorDetail: 'Connect sensors for waves and readings',
+  patientDetail: 'Select an outlined site to see its actions beside the bed',
+  monitor: 'Monitor and devices',
+  monitorDetail: 'Read the monitor or select the equipment',
   hint: 'Me',
   hintDetail: 'Look here when you get stuck',
   actions: 'Bottom controls',
@@ -108,23 +108,23 @@ const copy = language === 'zh-CN' ? {
 
   .cot {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: .14rem;
-    width: 100%;
-    max-width: 10rem;
-    height: 2.6rem;
+    gap: .1rem;
+    width: 2.35rem;
+    height: 4.8rem;
     box-sizing: border-box;
-    padding: .4rem .6rem;
+    padding: .36rem .28rem;
     margin-block-end: .55rem;
     border: 2px solid #838577;
     border-block-end: 4px solid #6a776e;
     background: #c6c6a7;
   }
 
-  .cot i { display: block; height: .85rem; margin: 0; background: #455958; border: 1px solid #3a4a4d; }
-  .cot i:first-child { flex: 0 1 1rem; height: 1rem; border-radius: 40%; background: #a17c63; }
-  .cot i:nth-child(2) { flex: 0 1 4rem; border-radius: .4rem .18rem .2rem .4rem; }
-  .cot i:nth-child(3) { flex: 0 1 3rem; height: .66rem; }
+  .cot i { display: block; margin: 0; background: #455958; border: 1px solid #3a4a4d; }
+  .cot i:first-child { flex: 0 0 .8rem; width: .75rem; border-radius: 40%; background: #a17c63; }
+  .cot i:nth-child(2) { flex: 0 0 1.12rem; width: 1.2rem; border-radius: .2rem; }
+  .cot i:nth-child(3) { flex: 0 0 1.42rem; width: .86rem; border-block: 0; background: linear-gradient(90deg, #455958 45%, #c6c6a7 45% 55%, #455958 55%); }
 
   .monitor-label {
     display: flex;
